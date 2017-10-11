@@ -47,38 +47,68 @@
 
 })(jQuery);
 
+//animateCss
+$.fn.extend({
+  animateCss: function (animationName) {
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    this.addClass('animated ' + animationName).one(animationEnd, function() {
+      $(this).removeClass('animated ' + animationName);
+    });
+    return this;
+  }
+});
+
 $(document).ready(function() {
   $('#sidr-button').sidr();
 
-  var machine = $('.slot').slotMachine({
-    active  : 0,
-    delay : 500
-  });
+  let machine;
+  let leadpick;
+  let award;
+  let count = 3;
 
-  // function onComplete(active){
-  //   switch(this.element[0].id){
-  //     case 'machine1':
-  //     $("#machine1Result").text("Index: "+this.active);
-  //     break;
-  //     case 'machine2':
-  //     $("#machine2Result").text("Index: "+this.active);
-  //     break;
-  //     case 'machine3':
-  //     $("#machine3Result").text("Index: "+this.active);
-  //     break;
-  //   }
-  // }
   function onStopCallback(active) {
-    console.log(active);
+    // console.log(active);
+    let fixNumber = active + 2
+    let awardText = $('.slot.active ul li:nth-child('+fixNumber+')').text()
+
+    $('.award').val(awardText);
   }
 
-  $('.spin').on('click', function() {
-    console.log(123);
-    // machine.prev()
-    machine.shuffle(5, onStopCallback)
+  $('.machine-lever-end').on('click', function() {
+
+    leadpick = $('.slots').attr('data-available');
+    if (typeof leadpick !== typeof undefined && leadpick !== false) {
+
+      console.log(count);
+      console.log(parseInt(count));
+      if(parseInt(count) < 2) {
+        $('.dblock-3 .leading').attr('disabled', 'disabled')
+      }
+      if(parseInt(count) < 1) {
+        $('.count').parent().animateCss('shake');
+      } else {
+        machine.shuffle(5, onStopCallback);
+        count -= 1;
+        $('.count').text(count)
+      }
+      
+    } else {
+      $('.dblock-3 .leading').animateCss('shake');
+    }
+
   })
 
-   //Set the carousel options
+  
+  $('.dblock-3 .dbtn').on('click', function() {
+    award = $('.award').val();
+    console.log(award);
+    if (typeof leadpick !== typeof undefined && leadpick !== false && typeof award !== typeof undefined && award !== false && award !== '') {
+      console.log('award');
+    } else {
+      console.log('noaward');
+    }
+  })
+
   $('#quote-carousel').carousel({
     pause: true,
     interval: 4000,
@@ -87,6 +117,28 @@ $(document).ready(function() {
   $('.counter').counterUp({
     delay: 10,
     time: 1000
-});
+  });
+
+
+  $('.dblock-3 select').on('change', function() {
+    let dataVal = $(this).val() - 1;
+
+    if(typeof machine !== 'undefined') {
+      machine.destroy();
+    }
+    if (dataVal + 1) {
+      $('.slots').attr('data-available', '1');
+    }
+
+    let wrap = $('.discounts');
+    wrap.children().removeClass('active');
+    wrap.children().eq(dataVal).addClass('active');
+
+    machine = $('.slots .slot.active ul').slotMachine({
+      delay : 500
+    });
+
+  })
 
 });
+
