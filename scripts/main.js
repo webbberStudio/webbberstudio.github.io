@@ -74,7 +74,7 @@ $(document).ready(function() {
     $('.award').val(awardText);
   }
 
-  $('.machine-lever-end').on('click', function() {
+  $('.machine-lever-end, .spin').on('click', function() {
 
     leadpick = $('.slots').attr('data-available');
     if (typeof leadpick !== typeof undefined && leadpick !== false) {
