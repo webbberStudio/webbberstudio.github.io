@@ -6,45 +6,74 @@
   <title>Title</title>
   <link rel="stylesheet" href="./styles/css/lightgallery.min.css">
   <link rel="stylesheet" href="./styles/css/lightslider.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   <link rel="stylesheet" href="./styles/main.css">
   <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,600,700,800,900&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
+  <nav class="navbar navbar-light bg-faded mobile-nav">
+    <button id="nav-icon3" class="navbar-toggler hidden-xl-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="collapse navbar-toggleable-xs" id="navbar-header">
+      <ul class="nav navbar-nav">
+        <li><a href="#top">Главная</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#about">О компании</a></li>
+          <li><a href="#advantages">Преимущества</a></li>
+          <li><a href="#sertificates">Сертификаты</a></li>
+          <li><a href="#clients">Клиенты</a></li>
+          <li><a href="#thanks">Благодарности</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </div>
+  </nav> <!-- /navbar -->
 
   <!-- begin header -->
-  <header class="header">
+  <header id="top" class="header">
+
+
 
     <!-- begin container -->
     <div class="container">
       <div class="highline ">
         <div class="row align-items-center">
-          <div class="logo col-3">
-            <img src="img/logo.jpg" alt="">
+          <div class="logo col-lg-3 col-4">
+            <img class="img-fluid" src="img/logo.jpg" alt="">
           </div>
 
-          <address class="col-3">
+          <address class="col-lg-3 col-3 hidden-xs-down">
             <p><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>г.Астана <br> ул.Улица д1</p>
           </address>
 
-          <div class="phone col-6">
+          <div class="phone col-lg-6 col-8 col-md-5">
             <a href=""><i class="fa fa-phone" aria-hidden="true"></i> +7 7172 12 34 56</a>
           </div>
+          
+        </div>
+        <div class="row ">
+          <address class="col-lg-3 col-12 hidden-sm-up d-flex justify-content-end">
+            <p><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>г.Астана <br> ул.Улица д1</p>
+          </address>
         </div>
       </div>
     </div>
 
     <nav>
 
-      <div class="container">
+      <div class="container hidden-lg-down">
         <ul class="nav justify-content-center">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Услуги</a></li>
-          <li><a href="#">О компании</a></li>
-          <li><a href="#">Преимущества</a></li>
-          <li><a href="#">Сертификаты</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a href="#">Благодарности</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a href="#top">Главная</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#about">О компании</a></li>
+          <li><a href="#advantages">Преимущества</a></li>
+          <li><a href="#sertificates">Сертификаты</a></li>
+          <li><a href="#clients">Клиенты</a></li>
+          <li><a href="#thanks">Благодарности</a></li>
+          <li><a href="#contacts">Контакты</a></li>
         </ul>
       </div>
     </nav>
@@ -59,27 +88,27 @@
     <!-- begin container -->
     <div class="container">
       <div class="row"> 
-        <div class="col-8">
-          <h1><span>Гарантированно избавляем от вредителей</span> в квартире, доме, офисе, любых помещениях</h1>
+        <div class="col-lg-8 col-md-12">
+          <h1 class="wow fadeInDown"><span>Гарантированно избавляем от вредителей</span> в квартире, доме, офисе, любых помещениях</h1>
 
-          <ul class="col-6">
-            <li>
+          <ul class="col-6 col-md-12">
+            <li class="wow fadeInLeft" data-wow-delay="1s">
               <img src="img/small/icon1.png" alt="">
               <p>Эффективные методики обработки</p>
             </li>
-            <li>
+            <li class="wow fadeInLeft" data-wow-delay="1.2s">
               <img src="img/small/icon2.png" alt="">
               <p>Исключительно проверенные препараты</p>
             </li>
-            <li>
+            <li class="wow fadeInLeft" data-wow-delay="1.4s">
               <img src="img/small/icon3.png" alt="">
               <p>Работа со 100% гарантией!</p>
             </li>
           </ul>
         </div>
 
-        <div class="col-4">
-          <img src="img/yellow-man.png" alt="">
+        <div class="col-4 d-flex align-items-end hidden-md-down">
+          <img class="img-fluid" src="img/yellow-man.png" alt="">
         </div>
 
       </div>
@@ -89,43 +118,43 @@
   <!-- end floating left -->
 
   <!-- begin  icons -->
-  <section class="services">
+  <section id="services" class="services">
     <div class="container">
 
       <div class="col-lg-9"> 
         <h2>ТОО «Столичная дезинфекция» предлагает юридическим и частным лицам комплаексные услуги по санитарной обработке:</h2>
       </div>
       <ul class="icons">
-        <li>
-          <img src="img/types/icon1.png" alt="">
+        <li class="wow fadeInLeft" data-wow-delay="0.1s">
+          <img  src="img/types/icon1.png" alt="">
           <div>
             <div class="title">Дератизация</div>
             <div class="desc">Полное избавление от грызунов и вредителей</div>
           </div>
         </li>
-        <li>
-          <img src="img/types/icon2.png" alt="">
+        <li class="wow fadeInDown" data-wow-delay="0.2s">
+          <img  src="img/types/icon2.png" alt="">
           <div>
             <div class="title">Дезинсекция</div>
             <div class="desc">Обработка помещений от насекомых</div>
           </div>
         </li>
-        <li>
-          <img src="img/types/icon3.png" alt="">
+        <li class="wow fadeInDown" data-wow-delay="0.3s">
+          <img  src="img/types/icon3.png" alt="">
           <div>
             <div class="title">Дезинфекция</div>
             <div class="desc">Уничтожение микроорганизмов, плесени игрибков</div>
           </div>
         </li>
-        <li>
-          <img src="img/types/icon4.png" alt="">
+        <li class="wow fadeInDown" data-wow-delay="0.4s">
+          <img  src="img/types/icon4.png" alt="">
           <div>
             <div class="title">Гнусоистребительные работы</div>
             <div class="desc">Вытравление комаров, мошек и мух</div>
           </div>
         </li>
-        <li>
-          <img src="img/types/icon5.png" alt="">
+        <li class="wow fadeInDown" data-wow-delay="0.5s">
+          <img  src="img/types/icon5.png" alt="">
           <div>
             <div class="title">Камерное обеззараживание</div>
             <div class="desc">Обеззараживание и дезинфекция одежды, обуви, постельных принадлежностей</div>
@@ -141,8 +170,8 @@
   <section class="price">
     <div class="container">
       <div class="row"> 
-        <div class="col-8"><h4>Ознакомиться с ценами на наши услуги</h4></div>
-        <div class="col-4"><a class="data-button" download href="img/price.docx">Скачать прайс-лист</a></div>
+        <div class="col-lg-8 col-md-12"><h4>Ознакомиться с ценами на наши услуги</h4></div>
+        <div class="col-lg-4 wow shake d-flex align-items-center""><a class="data-button " download href="img/price.docx">Скачать прайс-лист</a></div>
       </div>
     </div>
   </section>
@@ -153,7 +182,7 @@
   <!-- begin  statistic -->
   <section class="why">
     <div class="container"> 
-      <h2><span>ТОО «Столичная дезинфекция»</span><br> оказывает услуги по эффективной очистке любых помещений</h2>
+      <h2 class="wow fadeInDown"><span>ТОО «Столичная дезинфекция»</span><br> оказывает услуги по эффективной очистке любых помещений</h2>
 
       <div class="bordered">
 
@@ -161,27 +190,27 @@
 
         <ul class="icons">
           <li>
-            <p class="int">1500</p>
+            <p class="int counter">1500</p>
             <p class="title">Довольных клиентов</p>
           </li>
           <li>
-            <p class="int">575</p>
+            <p class="int counter">575</p>
             <p class="title">Очищенных объектов</p>
           </li>
           <li>
-            <p class="int">100%</p>
+            <p class="int"><span class="counter">100</span>%</p>
             <p class="title">Эффективность работ</p>
           </li>
           <li>
-            <p class="int">57%</p>
+            <p class="int"><span class="counter">57</span>%</p>
             <p class="title">Клиентов приходят по рекомендации</p>
           </li>
           <li>
-            <p class="int">9</p>
+            <p class="int counter">9</p>
             <p class="title">Единиц техники</p>
           </li>
           <li>
-            <p class="int">1</p>
+            <p class="int counter">1</p>
             <p class="title">Собственная лаборатория</p>
           </li>
         </ul>
@@ -195,7 +224,7 @@
   <!-- end  statistic --> 
   
   <!-- begin  adventages -->
-  <section class="advantages">
+  <section id="advantages" class="advantages">
     <div class="container">
 
       <!-- <div class="img-wrap"><img src="img/bg-hue.jpg" alt=""></div> -->
@@ -203,31 +232,31 @@
         <h4>Преимущества<br> ТОО «Столичная дезинфекция»</h4>
 
         <ul class="icons">
-          <li>
+          <li class="wow fadeInLeft" data-wow-delay="0.1s">
             <div class="img"><img src="img/advantages/icon1.png" alt=""></div>
             <div>
               <div class="title">Бесплатная консультация</div>
             </div>
           </li>
-          <li>
+          <li class="wow fadeInDown" data-wow-delay="0.2s">
             <div class="img"><img src="img/advantages/icon2.png" alt=""></div>
             <div>
               <div class="title">Сертифицированые препараты и средства</div>
             </div>
           </li>
-          <li>
+          <li class="wow fadeInDown" data-wow-delay="0.3s">
             <div class="img"><img src="img/advantages/icon3.png" alt=""></div>
             <div>
               <div class="title">Выезд специалистов в удобное для вас время</div>
             </div>
           </li>
-          <li>
+          <li class="wow fadeInDown" data-wow-delay="0.4s">
             <div class="img"><img src="img/advantages/icon4.png" alt=""></div>
             <div>
               <div class="title">Обработка любых помещений</div>
             </div>
           </li>
-          <li>
+          <li class="wow fadeInDown" data-wow-delay="0.5s">
             <div class="img"><img src="img/advantages/icon5.png" alt=""></div>
             <div>
               <div class="title">Гарантированное избавление от вредителей</div>
@@ -236,7 +265,7 @@
         </ul>
 
 
-        <div class="gov"><img src="img/gov.png" alt=""></div>
+        <div class="gov"><img class="img-fluid" src="img/gov.png" alt=""></div>
       </div>
 
 
@@ -252,10 +281,10 @@
   <section class="papers">
     <div class="container">
       <div class="row"> 
-        <div class="col-lg-4 sertificates">
+        <div id="sertificates" class="col-lg-4 sertificates wow fadeIn" data-wow-delay="0.4s">
           <h6>Сертификаты</h6>
-
-          <ul id="sertificates">
+          
+          <ul id="sertificates1">
             <li data-thumb="img/sertificate/1.jpg" data-src="img/sertificate/1.jpg">
               <img src="img/sertificate/1.jpg" />
             </li>
@@ -269,7 +298,7 @@
 
 
         </div>
-        <div class="col-lg-4 clients">
+        <div id="clients" class="col-lg-4 clients wow fadeIn" data-wow-delay="0.6s">
           <h6>Наши клиенты</h6>
           <div class="dubl">
             <ul id="clients1">
@@ -280,12 +309,10 @@
               <li data-thumb="img/thanks/2.jpg" data-src="img/thanks/2.jpg">
                 <img src="img/thanks/2.jpg" />
               </li>
-
-              
             </li>
           </ul>
 
-          <ul id="clients2">
+          <ul class="ul-down" id="clients2">
             <li data-thumb="img/thanks/2.jpg" data-src="img/thanks/2.jpg">
               <img src="img/thanks/2.jpg" />
             </li>
@@ -296,7 +323,7 @@
           </ul>
         </div>
       </div>
-      <div class="col-lg-4 thanks">
+      <div id="thanks" class="col-lg-4 thanks wow fadeIn" data-wow-delay="0.8s">
         <h6>Благодарности</h6>
 
         <div class="dubl">  
@@ -311,7 +338,7 @@
           </li>
         </ul>
 
-        <ul id="thanks2">
+        <ul class="ul-down" id="thanks2">
           <li data-thumb="img/thanks/1.jpg" data-src="img/thanks/1.jpg">
             <img src="img/thanks/1.jpg" />
           </li>
@@ -336,35 +363,35 @@
     <h4>Услуги от ТОО «Столичная дезинфекция» - это:</h4>
 
     <ul class="icons">
-      <li>
+      <li class="wow fadeInLeft" data-wow-delay="0.1s">
         <img src="img/middle/icon1.png" alt="">
         <div>
           <div class="title">Эффективно</div>
           <div class="desc">Гарантированный результат и высокое качество работы</div>
         </div>
       </li>
-      <li>
+      <li class="wow fadeInDown" data-wow-delay="0.2s">
         <img src="img/middle/icon2.png" alt="">
         <div>
           <div class="title">Быстро</div>
           <div class="desc">Мы используем только лучшее оборудование и препараты</div>
         </div>
       </li>
-      <li>
+      <li class="wow fadeInDown" data-wow-delay="0.3s">
         <img src="img/middle/icon3.png" alt="">
         <div>
           <div class="title">Безопасно</div>
           <div class="desc">В нашем арсенале только сертифицированные средства</div>
         </div>
       </li>
-      <li>
+      <li class="wow fadeInDown" data-wow-delay="0.4s">
         <img src="img/middle/icon4.png" alt="">
         <div>
           <div class="title">Доступно</div>
           <div class="desc">Наши цены ниже среднерыночных на 20%</div>
         </div>
       </li>
-      <li>
+      <li class="wow fadeInDown" data-wow-delay="0.5s">
         <img src="img/middle/icon5.png" alt="">
         <div>
           <div class="title">Продуктивно</div>
@@ -377,11 +404,11 @@
 <!-- end how -->
 
 <!-- begin float left -->
-<section class="floating left about">
+<section id="about" class="floating left about">
   <div class="container">
 
     <div class="row">
-      <div class="col-8">
+      <div class="col-lg-8 col-md-12">
         <h4>О компании</h4>
         <p>ТОО «Столичная дезинфекция» является базовым специализированным
           предприятием Министерства здравоохранения Республики Казахстан.Свою практическую деятельность ТОО осуществляет на основании
@@ -394,7 +421,7 @@
           «Системы менеджмента профессиональной безопасности и здоровья»,
         «Системы менеджмента качества».</p>
       </div>
-      <div class="col-4"><img src="img/white-man.png" alt=""></div>
+      <div class="col-4 d-flex align-items-end hidden-md-down"><img class="img-fluid" src="img/white-man.png" alt=""></div>
     </div>
 
   </div>
@@ -402,18 +429,18 @@
 <!-- end float left -->
 
 <!-- begin contact -->
-<section class="contact">
+<section id="contacts" class="contact">
   <div class="container">
 
     <div class="row"> 
 
-      <div class="col-lg-4"><img src="img/silver-man.png" alt=""></div>
+      <div class="col-lg-4 d-flex align-items-end hidden-md-down"><img src="img/silver-man.png" alt=""></div>
       <div class="col-lg-4">
         <h6>Абсолютная безопасность клиента и достижение результатов для нас превыше всего!</h6>
         <p>Заполните заявку и наши специалисты проконсультируют Вас по всем интересующим вопросам!</p>
       </div>
       <div class="col-lg-4">
-        <form action="#">
+        <form class="wow shake" data-wow-delay="0.7s" action="#">
           <div class="field">
             <i class="fa fa-user fa-lg" aria-hidden="true"></i><input type="text" name="name" placeholder="Ваше имя">
           </div>
@@ -469,12 +496,15 @@
     </div>
   </div>
 </div>
-<!-- <script src="../scripts/jquery.min.js"></script> -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="../scripts/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="../scripts/bootstrap.min.js"></script>
 <script src="../scripts/lightslider.min.js"></script>
 <script src="../scripts/lightgallery.min.js"></script>
+<script src="../scripts/wow.min.js"></script>
+<script src="../scripts/jquery.counterup.min.js"></script>
 <script src="../scripts/main.js"></script>
 </body>
 </html>
