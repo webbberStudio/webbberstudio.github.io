@@ -6,8 +6,7 @@
   padding: 0 32px;
   outline: none !important;
   cursor: pointer;
-  border: 1px solid #41b7fc;
-  border: 0; }
+  border: 1px solid #41b7fc; }
 
 .btn:hover {
   background-color: #0083e3; }
@@ -48,4 +47,5 @@
   background-color: #ffffff; }
 
 .filter {
-  background-image: url("../img/filter.png"); }
+  background-image: url("../img/filter.png");
+  border: 0; }
