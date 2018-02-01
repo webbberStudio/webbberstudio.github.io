@@ -1,0 +1,19 @@
+.select2-selection__rendered {
+  height: 32px;
+  border-radius: 3px;
+  background-color: #e4e9ea; }
+
+.select2-container--default {
+  height: 32px !important; }
+
+.select2-selection {
+  height: 32px !important; }
+
+.select2-container {
+  height: 32px !important; }
+
+.select2-container {
+  height: 32px !important; }
+
+.select2-container.select2-selection--single {
+  height: 32px !important; }

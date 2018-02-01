@@ -1,0 +1,73 @@
+.select2-container {
+  height: 32px;
+  border-radius: 3px;
+  background-color: #e4e9ea;
+  outline: none;
+  padding-right: 5px;
+  min-width: 60px;
+  box-sizing: content-box; }
+
+.icon + .select2-container {
+  padding-left: 36px;
+  box-sizing: content-box;
+  background-image: url("../img/flag/us.png");
+  background-repeat: no-repeat;
+  background-position: 10px center; }
+
+.dubleArrow + .select2-container {
+  background-color: transparent !important;
+  border: 1px solid #cfd8dc; }
+
+.dubleArrow + .select2-container .select2-selection {
+  background-color: transparent !important; }
+
+.select2-selection {
+  border-radius: 3px !important;
+  background-color: #e4e9ea !important;
+  border: 0 !important;
+  outline: none; }
+
+.select2-selection__rendered {
+  line-height: 32px !important;
+  color: #263238 !important;
+  font-weight: 600;
+  outline: none;
+  padding-right: 35px;
+  box-sizing: content-box;
+  min-width: 40px; }
+
+.select2-selection__arrow {
+  height: 32px !important;
+  top: -1px !important;
+  right: 7px !important; }
+
+.select2.select2-container.select2-container--open {
+  border: 1px solid #798f96;
+  background-color: rgba(121, 143, 150, 0.2);
+  border-radius: 3px;
+  padding-right: 3px; }
+
+form + .select2-container.select2-container--default.select2-container--open {
+  border: 0;
+  background-color: transparent; }
+
+.select2-dropdown {
+  background-color: #fff !important;
+  box-shadow: 0 8px 16px rgba(121, 143, 150, 0.24), 0 0 8px rgba(121, 143, 150, 0.12) !important;
+  border-radius: 3px !important;
+  padding: 15px 6px 20px;
+  border: 0;
+  margin-top: 5px; }
+  .select2-dropdown .select2-results__option {
+    color: #263238;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 10px; }
+  .select2-dropdown .select2-results__option--highlighted {
+    background-color: #e4e9ea !important;
+    padding: 6px 10px;
+    border-radius: 3px;
+    color: #263238 !important; }
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: transparent; }

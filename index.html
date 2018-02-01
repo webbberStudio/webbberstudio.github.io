@@ -1,512 +1,251 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Title</title>
-  <link rel="stylesheet" href="./styles/css/lightgallery.min.css">
-  <link rel="stylesheet" href="./styles/css/lightslider.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-  <link rel="stylesheet" href="./styles/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,600,700,800,900&amp;subset=cyrillic" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>test</title>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <nav class="navbar navbar-light bg-faded mobile-nav">
-    <button id="nav-icon3" class="navbar-toggler hidden-xl-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="collapse navbar-toggleable-xs" id="navbar-header">
-      <ul class="nav navbar-nav">
-        <li><a href="#top">Главная</a></li>
-          <li><a href="#services">Услуги</a></li>
-          <li><a href="#about">О компании</a></li>
-          <li><a href="#advantages">Преимущества</a></li>
-          <li><a href="#sertificates">Сертификаты</a></li>
-          <li><a href="#clients">Клиенты</a></li>
-          <li><a href="#thanks">Благодарности</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-      </ul>
-    </div>
-  </nav> <!-- /navbar -->
+  <div class="wrapper_searchterms">
 
-  <!-- begin header -->
-  <header id="top" class="header">
+    <!-- top nav -->
+    <nav class="navbar navbar-toggleable-md">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
 
-
-
-    <!-- begin container -->
-    <div class="container">
-      <div class="highline ">
-        <div class="row align-items-center">
-          <div class="logo col-lg-3 col-4">
-            <img class="img-fluid" src="img/logo.jpg" alt="">
-          </div>
-
-          <address class="col-lg-3 col-3 hidden-xs-down">
-            <p><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>г.Астана <br> ул.Улица д1</p>
-          </address>
-
-          <div class="phone col-lg-6 col-8 col-md-5">
-            <a href=""><i class="fa fa-phone" aria-hidden="true"></i> +7 7172 12 34 56</a>
-          </div>
+      <div class="navbar-collapse d-flex justify-content-end">
+        <ul class="navbar-nav d-flex align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#">SKUs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Campaigns</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Keywords</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Searchterms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tracking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Autopilot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help<i class="icon"></i></a>
+          </li>
           
-        </div>
-        <div class="row ">
-          <address class="col-lg-3 col-12 hidden-sm-up d-flex justify-content-end">
-            <p><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>г.Астана <br> ул.Улица д1</p>
-          </address>
-        </div>
-      </div>
-    </div>
-
-    <nav>
-
-      <div class="container hidden-lg-down">
-        <ul class="nav justify-content-center">
-          <li><a href="#top">Главная</a></li>
-          <li><a href="#services">Услуги</a></li>
-          <li><a href="#about">О компании</a></li>
-          <li><a href="#advantages">Преимущества</a></li>
-          <li><a href="#sertificates">Сертификаты</a></li>
-          <li><a href="#clients">Клиенты</a></li>
-          <li><a href="#thanks">Благодарности</a></li>
-          <li><a href="#contacts">Контакты</a></li>
         </ul>
+
+        <div class="profile dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="http://example.com" id="dropdown-profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="avatar"></span> <span class="name">Gary</span></a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-profile">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
       </div>
     </nav>
+
+    <!-- end top nav -->
     
-    <!-- end container -->
 
-  </header>
-  <!-- end header -->
+    <!-- secondary header -->
+    <div class="secondary-header d-flex justify-content-between align-items-center">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">SearchTerm To</li>
+      </ol>
 
-  <!-- begin floating left -->
-  <section class="floating left green">
-    <!-- begin container -->
-    <div class="container">
-      <div class="row"> 
-        <div class="col-lg-8 col-md-12">
-          <h1 class="wow fadeInDown"><span>Гарантированно избавляем от вредителей</span> в квартире, доме, офисе, любых помещениях</h1>
+      <div class="currency-options">
+        <select class="js-example-basic-single flag icon" name="flag">
+          <option value="US">A2UZPC5JPB2EX1</option>
+          <option value="US">A2UZPC5JPB2EX2</option>
+          <option value="US">A2UZPC5JPB2EX3</option>
+        </select>
+        <button type="button" class="btn icon add btn-outline-primary">Add</button>
+        <span class="title">Currency: </span>
+        <select class="js-example-basic-single currency" name="currency">
+          <option value="USD">USD </option>
+          <option value="EUR">EUR </option>
+          <option value="RUB">RUB </option>
+        </select>
 
-          <ul class="col-6 col-md-12">
-            <li class="wow fadeInLeft" data-wow-delay="1s">
-              <img src="img/small/icon1.png" alt="">
-              <p>Эффективные методики обработки</p>
-            </li>
-            <li class="wow fadeInLeft" data-wow-delay="1.2s">
-              <img src="img/small/icon2.png" alt="">
-              <p>Исключительно проверенные препараты</p>
-            </li>
-            <li class="wow fadeInLeft" data-wow-delay="1.4s">
-              <img src="img/small/icon3.png" alt="">
-              <p>Работа со 100% гарантией!</p>
-            </li>
-          </ul>
-        </div>
+        <!-- <select class="js-example-templating js-states form-control select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
 
-        <div class="col-4 d-flex align-items-end hidden-md-down">
-          <img class="img-fluid" src="img/yellow-man.png" alt="">
-        </div>
+          <option value="US">A2UZPC5JPB2EX1</option>
+          <option value="US">A2UZPC5JPB2EX1</option>
+          <option value="US">A2UZPC5JPB2EX12</option>
+          <option value="US">Washington</option>
 
+        </select> -->
       </div>
     </div>
-    <!-- end container -->
-  </section>
-  <!-- end floating left -->
+    <!-- end secondary header -->
+    
 
-  <!-- begin  icons -->
-  <section id="services" class="services">
-    <div class="container">
+    <div class="table">
 
-      <div class="col-lg-9"> 
-        <h2>ТОО «Столичная дезинфекция» предлагает юридическим и частным лицам комплаексные услуги по санитарной обработке:</h2>
+      <div class="control form-inline  align-items-center"> 
+        <select class="js-example-basic-single length dubleArrow" name="currency">
+          <option value="10">10 </option>
+          <option value="25">25 </option>
+        </select>
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="text" class="form-control search" id="search"  placeholder="Search">
+        <button type="button" class="btn icon visible btn-outline-primary">Column visability</button>
+        <button type="button" class="btn icon filter btn-primary">Filters Campaigns</button>
+        <button type="button" class="btn icon filter btn-primary">Filters</button>
+        
       </div>
-      <ul class="icons">
-        <li class="wow fadeInLeft" data-wow-delay="0.1s">
-          <img  src="img/types/icon1.png" alt="">
-          <div>
-            <div class="title">Дератизация</div>
-            <div class="desc">Полное избавление от грызунов и вредителей</div>
-          </div>
-        </li>
-        <li class="wow fadeInDown" data-wow-delay="0.2s">
-          <img  src="img/types/icon2.png" alt="">
-          <div>
-            <div class="title">Дезинсекция</div>
-            <div class="desc">Обработка помещений от насекомых</div>
-          </div>
-        </li>
-        <li class="wow fadeInDown" data-wow-delay="0.3s">
-          <img  src="img/types/icon3.png" alt="">
-          <div>
-            <div class="title">Дезинфекция</div>
-            <div class="desc">Уничтожение микроорганизмов, плесени игрибков</div>
-          </div>
-        </li>
-        <li class="wow fadeInDown" data-wow-delay="0.4s">
-          <img  src="img/types/icon4.png" alt="">
-          <div>
-            <div class="title">Гнусоистребительные работы</div>
-            <div class="desc">Вытравление комаров, мошек и мух</div>
-          </div>
-        </li>
-        <li class="wow fadeInDown" data-wow-delay="0.5s">
-          <img  src="img/types/icon5.png" alt="">
-          <div>
-            <div class="title">Камерное обеззараживание</div>
-            <div class="desc">Обеззараживание и дезинфекция одежды, обуви, постельных принадлежностей</div>
-          </div>
-        </li>
-      </ul>
+
+      <table id="example" class="display" cellspacing="0" width="100%" data-page-length='10'>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start date</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tiger Nixon</td>
+            <td>System Architect</td>
+            <td>Edinburgh</td>
+            <td>61</td>
+            <td>2011/04/25</td>
+            <td>$320,800</td>
+          </tr>
+          <tr>
+            <td>Garrett Winters</td>
+            <td>Accountant</td>
+            <td>Tokyo</td>
+            <td>63</td>
+            <td>2011/07/25</td>
+            <td>$170,750</td>
+          </tr>
+          <tr>
+            <td>Tiger Nixon</td>
+            <td>System Architect</td>
+            <td>Edinburgh</td>
+            <td>61</td>
+            <td>2011/04/25</td>
+            <td>$320,800</td>
+          </tr>
+          <tr>
+            <td>Garrett Winters</td>
+            <td>Accountant</td>
+            <td>Tokyo</td>
+            <td>63</td>
+            <td>2011/07/25</td>
+            <td>$170,750</td>
+          </tr>
+          <tr>
+            <td>Tiger Nixon</td>
+            <td>System Architect</td>
+            <td>Edinburgh</td>
+            <td>61</td>
+            <td>2011/04/25</td>
+            <td>$320,800</td>
+          </tr>
+          <tr>
+            <td>Garrett Winters</td>
+            <td>Accountant</td>
+            <td>Tokyo</td>
+            <td>63</td>
+            <td>2011/07/25</td>
+            <td>$170,750</td>
+          </tr>
+          <tr>
+            <td>Tiger Nixon</td>
+            <td>System Architect</td>
+            <td>Edinburgh</td>
+            <td>61</td>
+            <td>2011/04/25</td>
+            <td>$320,800</td>
+          </tr>
+          <tr>
+            <td>Garrett Winters</td>
+            <td>Accountant</td>
+            <td>Tokyo</td>
+            <td>63</td>
+            <td>2011/07/25</td>
+            <td>$170,750</td>
+          </tr>
+          <tr>
+            <td>Tiger Nixon</td>
+            <td>System Architect</td>
+            <td>Edinburgh</td>
+            <td>61</td>
+            <td>2011/04/25</td>
+            <td>$320,800</td>
+          </tr>
+          <tr>
+            <td>Garrett Winters</td>
+            <td>Accountant</td>
+            <td>Tokyo</td>
+            <td>63</td>
+            <td>2011/07/25</td>
+            <td>$170,750</td>
+          </tr>
+          <tr>
+            <td>Tiger Nixon</td>
+            <td>System Architect</td>
+            <td>Edinburgh</td>
+            <td>61</td>
+            <td>2011/04/25</td>
+            <td>$320,800</td>
+          </tr>
+          <tr>
+            <td>Garrett Winters</td>
+            <td>Accountant</td>
+            <td>Tokyo</td>
+            <td>63</td>
+            <td>2011/07/25</td>
+            <td>$170,750</td>
+          </tr>
+          <tr>
+            <td>Tiger Nixon</td>
+            <td>System Architect</td>
+            <td>Edinburgh</td>
+            <td>61</td>
+            <td>2011/04/25</td>
+            <td>$320,800</td>
+          </tr>
+          <tr>
+            <td>Garrett Winters</td>
+            <td>Accountant</td>
+            <td>Tokyo</td>
+            <td>63</td>
+            <td>2011/07/25</td>
+            <td>$170,750</td>
+          </tr>
+
+        </tbody>
+      </table>
 
     </div>
-  </section>
-  <!-- end  icons --> 
-  
-  <!-- begin service -->
-  <section class="price">
-    <div class="container">
-      <div class="row"> 
-        <div class="col-lg-8 col-md-12"><h4>Ознакомиться с ценами на наши услуги</h4></div>
-        <div class="col-lg-4 wow shake d-flex align-items-center""><a class="data-button " download href="img/price.docx">Скачать прайс-лист</a></div>
-      </div>
-    </div>
-  </section>
-  <!-- end service -->
 
-  
-
-  <!-- begin  statistic -->
-  <section class="why">
-    <div class="container"> 
-      <h2 class="wow fadeInDown"><span>ТОО «Столичная дезинфекция»</span><br> оказывает услуги по эффективной очистке любых помещений</h2>
-
-      <div class="bordered">
-
-        <h5>6 причин выбрать нашу компанию</h5>
-
-        <ul class="icons">
-          <li>
-            <p class="int counter">1500</p>
-            <p class="title">Довольных клиентов</p>
-          </li>
-          <li>
-            <p class="int counter">575</p>
-            <p class="title">Очищенных объектов</p>
-          </li>
-          <li>
-            <p class="int"><span class="counter">100</span>%</p>
-            <p class="title">Эффективность работ</p>
-          </li>
-          <li>
-            <p class="int"><span class="counter">57</span>%</p>
-            <p class="title">Клиентов приходят по рекомендации</p>
-          </li>
-          <li>
-            <p class="int counter">9</p>
-            <p class="title">Единиц техники</p>
-          </li>
-          <li>
-            <p class="int counter">1</p>
-            <p class="title">Собственная лаборатория</p>
-          </li>
-        </ul>
-
-        <div class="wrap-button">
-          <a class="data-button" data-toggle="modal" data-target="#exampleModal" href="#">Заказать звонок</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end  statistic --> 
-  
-  <!-- begin  adventages -->
-  <section id="advantages" class="advantages">
-    <div class="container">
-
-      <!-- <div class="img-wrap"><img src="img/bg-hue.jpg" alt=""></div> -->
-      <div class="ul-wrap"> 
-        <h4>Преимущества<br> ТОО «Столичная дезинфекция»</h4>
-
-        <ul class="icons">
-          <li class="wow fadeInLeft" data-wow-delay="0.1s">
-            <div class="img"><img src="img/advantages/icon1.png" alt=""></div>
-            <div>
-              <div class="title">Бесплатная консультация</div>
-            </div>
-          </li>
-          <li class="wow fadeInDown" data-wow-delay="0.2s">
-            <div class="img"><img src="img/advantages/icon2.png" alt=""></div>
-            <div>
-              <div class="title">Сертифицированые препараты и средства</div>
-            </div>
-          </li>
-          <li class="wow fadeInDown" data-wow-delay="0.3s">
-            <div class="img"><img src="img/advantages/icon3.png" alt=""></div>
-            <div>
-              <div class="title">Выезд специалистов в удобное для вас время</div>
-            </div>
-          </li>
-          <li class="wow fadeInDown" data-wow-delay="0.4s">
-            <div class="img"><img src="img/advantages/icon4.png" alt=""></div>
-            <div>
-              <div class="title">Обработка любых помещений</div>
-            </div>
-          </li>
-          <li class="wow fadeInDown" data-wow-delay="0.5s">
-            <div class="img"><img src="img/advantages/icon5.png" alt=""></div>
-            <div>
-              <div class="title">Гарантированное избавление от вредителей</div>
-            </div>
-          </li>
-        </ul>
-
-
-        <div class="gov"><img class="img-fluid" src="img/gov.png" alt=""></div>
-      </div>
-
-
-    </div>
-  </section>
-  <!-- end  adventages -->  
-
-
-
-
-
-  <!-- begin  papers -->
-  <section class="papers">
-    <div class="container">
-      <div class="row"> 
-        <div id="sertificates" class="col-lg-4 sertificates wow fadeIn" data-wow-delay="0.4s">
-          <h6>Сертификаты</h6>
-          
-          <ul id="sertificates1">
-            <li data-thumb="img/sertificate/1.jpg" data-src="img/sertificate/1.jpg">
-              <img src="img/sertificate/1.jpg" />
-            </li>
-            <li data-thumb="img/sertificate/2.jpg" data-src="img/sertificate/2.jpg">
-              <img src="img/sertificate/2.jpg" />
-            </li>
-            <li data-thumb="img/sertificate/3.jpg" data-src="img/sertificate/3.jpg">
-              <img src="img/sertificate/3.jpg" />
-            </li>
-          </ul>
-
-
-        </div>
-        <div id="clients" class="col-lg-4 clients wow fadeIn" data-wow-delay="0.6s">
-          <h6>Наши клиенты</h6>
-          <div class="dubl">
-            <ul id="clients1">
-              <li data-thumb="img/thanks/1.jpg" data-src="img/thanks/1.jpg">
-                <img src="img/thanks/1.jpg" />
-              </li>
-
-              <li data-thumb="img/thanks/2.jpg" data-src="img/thanks/2.jpg">
-                <img src="img/thanks/2.jpg" />
-              </li>
-            </li>
-          </ul>
-
-          <ul class="ul-down" id="clients2">
-            <li data-thumb="img/thanks/2.jpg" data-src="img/thanks/2.jpg">
-              <img src="img/thanks/2.jpg" />
-            </li>
-            <li data-thumb="img/thanks/1.jpg" data-src="img/thanks/1.jpg">
-              <img src="img/thanks/1.jpg" />
-            </li>
-
-          </ul>
-        </div>
-      </div>
-      <div id="thanks" class="col-lg-4 thanks wow fadeIn" data-wow-delay="0.8s">
-        <h6>Благодарности</h6>
-
-        <div class="dubl">  
-          <ul id="thanks1">
-            <li data-thumb="img/thanks/2.jpg" data-src="img/thanks/2.jpg">
-              <img src="img/thanks/2.jpg" />
-            </li>
-            <li data-thumb="img/thanks/1.jpg" data-src="img/thanks/1.jpg">
-              <img src="img/thanks/1.jpg" />
-            </li>
-            
-          </li>
-        </ul>
-
-        <ul class="ul-down" id="thanks2">
-          <li data-thumb="img/thanks/1.jpg" data-src="img/thanks/1.jpg">
-            <img src="img/thanks/1.jpg" />
-          </li>
-          <li data-thumb="img/thanks/2.jpg" data-src="img/thanks/2.jpg">
-            <img src="img/thanks/2.jpg" />
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<!-- end  papers -->
-
-
-
-
-
-<!-- begin how -->
-<section class="how">
-  <div class="container"> 
-    <h4>Услуги от ТОО «Столичная дезинфекция» - это:</h4>
-
-    <ul class="icons">
-      <li class="wow fadeInLeft" data-wow-delay="0.1s">
-        <img src="img/middle/icon1.png" alt="">
-        <div>
-          <div class="title">Эффективно</div>
-          <div class="desc">Гарантированный результат и высокое качество работы</div>
-        </div>
-      </li>
-      <li class="wow fadeInDown" data-wow-delay="0.2s">
-        <img src="img/middle/icon2.png" alt="">
-        <div>
-          <div class="title">Быстро</div>
-          <div class="desc">Мы используем только лучшее оборудование и препараты</div>
-        </div>
-      </li>
-      <li class="wow fadeInDown" data-wow-delay="0.3s">
-        <img src="img/middle/icon3.png" alt="">
-        <div>
-          <div class="title">Безопасно</div>
-          <div class="desc">В нашем арсенале только сертифицированные средства</div>
-        </div>
-      </li>
-      <li class="wow fadeInDown" data-wow-delay="0.4s">
-        <img src="img/middle/icon4.png" alt="">
-        <div>
-          <div class="title">Доступно</div>
-          <div class="desc">Наши цены ниже среднерыночных на 20%</div>
-        </div>
-      </li>
-      <li class="wow fadeInDown" data-wow-delay="0.5s">
-        <img src="img/middle/icon5.png" alt="">
-        <div>
-          <div class="title">Продуктивно</div>
-          <div class="desc">Мы разрешим даже самую сложную ситуацию, связанную с нашествием вредителей.</div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-<!-- end how -->
-
-<!-- begin float left -->
-<section id="about" class="floating left about">
-  <div class="container">
-
-    <div class="row">
-      <div class="col-lg-8 col-md-12">
-        <h4>О компании</h4>
-        <p>ТОО «Столичная дезинфекция» является базовым специализированным
-          предприятием Министерства здравоохранения Республики Казахстан.Свою практическую деятельность ТОО осуществляет на основании
-        государственной лицензии (СЭ №00842CZ от 18.03.2010 г.)</p>
-        <p>Имеет Сертификаты соответствия: «Системы экологического менеджмента»,
-          «Системы менеджмента профессиональной безопасности и здоровья»,
-          «Системы менеджмента качества». Имеет Сертификаты соответствия: «Системы экологического менеджмента»,
-          «Системы менеджмента профессиональной безопасности и здоровья»,
-          «Системы менеджмента качества». Имеет Сертификаты соответствия: «Системы экологического менеджмента»,
-          «Системы менеджмента профессиональной безопасности и здоровья»,
-        «Системы менеджмента качества».</p>
-      </div>
-      <div class="col-4 d-flex align-items-end hidden-md-down"><img class="img-fluid" src="img/white-man.png" alt=""></div>
-    </div>
 
   </div>
-</section>
-<!-- end float left -->
+  <script src="js/libs.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
 
-<!-- begin contact -->
-<section id="contacts" class="contact">
-  <div class="container">
 
-    <div class="row"> 
 
-      <div class="col-lg-4 d-flex align-items-end hidden-md-down"><img src="img/silver-man.png" alt=""></div>
-      <div class="col-lg-4">
-        <h6>Абсолютная безопасность клиента и достижение результатов для нас превыше всего!</h6>
-        <p>Заполните заявку и наши специалисты проконсультируют Вас по всем интересующим вопросам!</p>
-      </div>
-      <div class="col-lg-4">
-        <form class="wow shake" data-wow-delay="0.7s" action="#">
-          <div class="field">
-            <i class="fa fa-user fa-lg" aria-hidden="true"></i><input type="text" name="name" placeholder="Ваше имя">
-          </div>
-          <div class="field">
-            <i class="fa fa-phone fa-lg" aria-hidden="true"></i><input type="text" name="phone" placeholder="Номер телефона">
-          </div>
-          <div class="field">
-            <i class="fa fa-envelope fa-lg" aria-hidden="true"></i><input type="text" name="mail" placeholder="E-mail">
-          </div>
-          <div class="field">
-            <input class="data-button" type="submit" value="Заказать звонок">
-          </div>
-        </form>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-<!-- end  contact --> 
-
-<footer>
-  <div class="container">
-    <p class="copy">Разработка GOLDADV</p>
-  </div>
-</footer>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Заказать обратный звонок</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="#">
-          <div class="field">
-            <i class="fa fa-user fa-lg" aria-hidden="true"></i><input type="text" name="name" placeholder="Ваше имя">
-          </div>
-          <div class="field">
-            <i class="fa fa-phone fa-lg" aria-hidden="true"></i><input type="text" name="phone" placeholder="Номер телефона">
-          </div>
-          <div class="field">
-            <i class="fa fa-envelope fa-lg" aria-hidden="true"></i><input type="text" name="mail" placeholder="E-mail">
-          </div>
-          <div class="field">
-            <input class="data-button" type="submit" value="Заказать звонок">
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<script src="../scripts/jquery.min.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="../scripts/bootstrap.min.js"></script>
-<script src="../scripts/lightslider.min.js"></script>
-<script src="../scripts/lightgallery.min.js"></script>
-<script src="../scripts/wow.min.js"></script>
-<script src="../scripts/jquery.counterup.min.js"></script>
-<script src="../scripts/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
-
-<!-- '\201C' -->
