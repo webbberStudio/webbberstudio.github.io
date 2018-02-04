@@ -28,8 +28,10 @@ $(document).ready(function() {
 
   } );
   $('.visible-container label').on( 'click', function (e) {
-    var column = table.column( $(this).prev().attr('id').slice(11) );
-    // console.log($(this).prev().attr('id').slice(11));
+    var val = $(this).prev().attr('id').slice(11);
+    val = parseInt(val) + 1;
+    var column = table.column( val );
+    console.log($(this).prev().attr('id').slice(11));
     column.visible( ! column.visible() );
 
   } );
