@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>PPC.tools</title>
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -14,11 +15,11 @@
   <div class="wrapper_searchterms">
 
     <!-- top nav -->
-    <nav class="navbar navbar-toggleable-md">
+    <nav class="navbar navbar-toggleable-md d-flex justify-content-between flex-row">
       <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
 
       <div class="navbar-collapse d-flex justify-content-end">
-        <ul class="navbar-nav d-flex align-items-center">
+        <ul class="navbar-nav d-flex align-items-center justify-content-between flex-row">
           <li class="nav-item">
             <a class="nav-link" href="#">SKUs</a>
           </li>
@@ -61,7 +62,7 @@
     <div class="secondary-header d-flex justify-content-between align-items-center">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active">SearchTerm To</li>
+        <li class="breadcrumb-item active">SearchTerm Tools</li>
       </ol>
 
       <div class="currency-options">
@@ -77,15 +78,6 @@
           <option value="EUR">EUR </option>
           <option value="RUB">RUB </option>
         </select>
-
-        <!-- <select class="js-example-templating js-states form-control select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
-
-          <option value="US">A2UZPC5JPB2EX1</option>
-          <option value="US">A2UZPC5JPB2EX1</option>
-          <option value="US">A2UZPC5JPB2EX12</option>
-          <option value="US">Washington</option>
-
-        </select> -->
       </div>
     </div>
     <!-- end secondary header -->
@@ -93,142 +85,806 @@
 
     <div class="table">
 
-      <div class="control form-inline  align-items-center"> 
-        <select class="js-example-basic-single length dubleArrow" name="currency">
-          <option value="10">10 </option>
-          <option value="25">25 </option>
-        </select>
-        <label for="inputPassword2" class="sr-only">Password</label>
-        <input type="text" class="form-control search" id="search"  placeholder="Search">
-        <button type="button" class="btn icon visible btn-outline-primary">Column visability</button>
-        <button type="button" class="btn icon filter btn-primary">Filters Campaigns</button>
-        <button type="button" class="btn icon filter btn-primary">Filters</button>
-        
+      <div class="control form-inline  align-items-end justify-content-between">
+        <div class="d-flex flex-column basic-view">
+          <span class="title">Show</span>
+          <div class="d-flex flex-row">
+            <select class="js-example-basic-single length dubleArrow">
+              <option value="10">10 </option>
+              <option value="25">25 </option>
+            </select>
+
+            <div class="label"> 
+              <input type="text" class="form-control search" id="search"  placeholder="Search">
+
+              <div class="search-close"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filters">
+          <div class="group">
+            <button class="btn icon visible btn-outline-primary">Column visability</button>
+            <button class="btn icon filter btn-primary">Filters Campaigns</button>
+            <button class="btn icon filter btn-primary">Filters</button>
+          </div>
+
+          <div class="visible-container">
+
+            <div class="row">
+              <div class="col-4">
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">Search Query</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck2">
+                  <label class="custom-control-label" for="customCheck2">Details</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck3">
+                  <label class="custom-control-label" for="customCheck3">Neg</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck4">
+                  <label class="custom-control-label" for="customCheck4">Spend</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck5">
+                  <label class="custom-control-label" for="customCheck5">Clicks</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck6">
+                  <label class="custom-control-label" for="customCheck6">Ave CPC</label>
+                </div>
+
+              </div>
+
+              <div class="col-4">
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck7">
+                  <label class="custom-control-label" for="customCheck7">State</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck8">
+                  <label class="custom-control-label" for="customCheck8">Bid</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck9">
+                  <label class="custom-control-label" for="customCheck9">Match</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck10">
+                  <label class="custom-control-label" for="customCheck10">AcoS</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck11">
+                  <label class="custom-control-label" for="customCheck11">Ctr</label>
+                </div>
+
+              </div>
+
+              <div class="col-4">
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck12">
+                  <label class="custom-control-label" for="customCheck12">Keyword</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck13">
+                  <label class="custom-control-label" for="customCheck13">Suggested</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck14">
+                  <label class="custom-control-label" for="customCheck14">Rev</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck15">
+                  <label class="custom-control-label" for="customCheck15">Impress.</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck16">
+                  <label class="custom-control-label" for="customCheck16">Orders</label>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="date-pickers d-flex flex-row">
+          <div class="d-flex flex-column">
+            <span class="title">Select Data Range (preset, fast)</span>
+            <input type="text" id="datePicker1" class="form-control datepicker">
+          </div>
+          <div class="d-flex flex-column">
+            <span class="title">Select Data Range (slow)</span>
+            <input type="text" id="datePicker2" class="form-control datepicker">
+          </div>
+        </div>
+        <div class="export">
+
+          <div class="data-export data-copy"></div>
+          <div class="data-export data-print"></div>
+          <div class="data-export data-csv"></div>
+        </div>
+      </div>
+
+
+
+      <div class="legend">
+
+        <div class="indicator">
+
+        </div>
+
       </div>
 
       <table id="example" class="display" cellspacing="0" width="100%" data-page-length='10'>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Age</th>
-            <th>Start date</th>
-            <th>Salary</th>
+            <th>ID</th>
+            <th>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                <label class="custom-control-label" for="customCheck2"></label>
+              </div>
+            </th>
+            <th>Search&nbsp;Query</th>
+            <th>State</th>
+            <th>Keyword</th>
+            <th>Details</th>
+            <th>Bid</th>
+            <th>Suggested</th>
+            <th>Neg.</th>
+            <th>Match</th>
+            <th>Rev</th>
+            <th>Spend</th>
+            <th>AcoS,&nbsp;%</th>
+            <th>Impress.</th>
+            <th>Clicks</th>
+            <th>Ctr</th>
+            <th>Orders</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
+            <td>
+              133
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
+
           <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>2011/07/25</td>
-            <td>$170,750</td>
+            <td>
+              553
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>108&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
+
           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
+            <td>
+              793
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
+
           <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>2011/07/25</td>
-            <td>$170,750</td>
+            <td>
+              178
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
+
           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>108&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
+
           <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>2011/07/25</td>
-            <td>$170,750</td>
+            <td>
+              144
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
+
           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
+
           <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>2011/07/25</td>
-            <td>$170,750</td>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>108&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
+
           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
+
           <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>2011/07/25</td>
-            <td>$170,750</td>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
+
           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>108&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
+
           <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>2011/07/25</td>
-            <td>$170,750</td>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
+
           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
+
           <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>2011/07/25</td>
-            <td>$170,750</td>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>108&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>108&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              123
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              344
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>108&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              156
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              146
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              121
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>108&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              124
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              145
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              163
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>108&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              178
+            </td>
+            <td></td>
+            <td>dbu mjuufs cpy</td>
+            <td>round</td>
+            <td>mjuufsktz</td>
+            <td>45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</td>
+            <td>1.81</td>
+            <td>$2.00</td>
+            <td>CE</td>
+            <td>broad</td>
+            <td>208&nbsp;112</td>
+            <td>421&nbsp;235</td>
+            <td>0.0023</td>
+            <td>2&nbsp;921&nbsp;145</td>
+            <td>1&nbsp;523</td>
+            <td>0.05</td>
+            <td>2&nbsp;312</td>
+            <td></td>
           </tr>
 
         </tbody>
@@ -239,6 +895,8 @@
 
   </div>
   <script src="js/libs.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
   <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
