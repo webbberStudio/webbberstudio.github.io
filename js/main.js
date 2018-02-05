@@ -8,7 +8,57 @@ function formatState (state) {
   return $state;
 };
 
+function formatState2 (state) {
+  if (!state.id) { return state.text; }
+  var $state = $(
+    '<span><img src="img/selected_icon/' +  state.element.dataset.icon + 
+    '.png" class="img-flag" /> ' + 
+    state.text +     '</span>'
+    );
+  return $state;
+};
+function formatStateCircle (state) {
+  if (state.id == 1) {
+    return $(
+      '<span><span class="round enabled"></span>' + 
+      state.text + '</span>'
+      );
+  }
+  if (state.id == 2) {
+    return $(
+      '<span><span class="round paused"></span>' + 
+      state.text + '</span>'
+      );
+  }
+  if (state.id == 3) {
+    return $(
+      '<span><span class="round archived"></span>' + 
+      state.text + '</span>'
+      );
+  }
+};
+
 $(document).ready(function() {
+  $('.table-edited-value input').on('focus', function() {
+    $(this).parent().after('<div class="table-edited-value-holder"></div>');
+    $(this).parent().addClass('active');
+  });
+
+  $('.table-edited-value button').on('focus', function() {
+    $(this).parent().removeClass('active');
+  });
+
+  $('.js-example-basic-single.state').select2({
+    dropdownAutoWidth: 1,
+    minimumResultsForSearch: -1,
+    templateResult: formatStateCircle
+  });
+  //
+
+  $('.js-example-basic-single.table').select2({
+    dropdownAutoWidth: 1,
+    minimumResultsForSearch: -1
+  });
   $('.js-example-basic-single.flag').select2({
     minimumResultsForSearch: -1,
     templateResult: formatState
@@ -20,11 +70,39 @@ $(document).ready(function() {
   $('.js-example-basic-single.length').select2({
     minimumResultsForSearch: -1
   });
+  $('.fast-date').select2({
+    minimumResultsForSearch: -1
+  });
+
+  $('.js-example-basic-single.actions').select2({
+    minimumResultsForSearch: -1,
+    templateResult: formatState2,
+    dropdownCssClass: 'icons'
+  });
+  
 
 
   // DataTabless
   var table  = $('#example').DataTable( {
-    "dom": 'rtp'
+    "dom": 'prtp',
+    "pagingType": 'simple_numbers',
+    "columnDefs":  [{
+      "targets": [0, 1, 7, 17],
+      "orderable": false, 
+      'className': 'pl-1'
+    },
+    {
+      "targets": [1],
+      'className': 'px-0'
+    },
+    {
+      "targets": [2],
+      'className': 'pl-0'
+    },
+    {
+      "targets": [3],
+      'className': 'pl-1 pr-0'
+    }]
 
   } );
   $('.visible-container label').on( 'click', function (e) {
@@ -46,6 +124,7 @@ $(document).ready(function() {
     table.search( value ).draw();
   } );
 
+  //datapicker
   $('#datePicker1, #datePicker2').daterangepicker({
     "ranges": {
       'Today': [moment(), moment()],
@@ -56,38 +135,38 @@ $(document).ready(function() {
       'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
     },
     "locale": {
-        "format": "MMM D, YYYY",
-        "separator": " - ",
-        "applyLabel": "Apply",
-        "cancelLabel": "Cancel",
-        "fromLabel": "From",
-        "toLabel": "To",
-        "customRangeLabel": "Custom",
-        "weekLabel": "W",
-        "daysOfWeek": [
-            "Su",
-            "Mo",
-            "Tu",
-            "We",
-            "Th",
-            "Fr",
-            "Sa"
-        ],
-        "monthNames": [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"
-        ],
-        "firstDay": 1
+      "format": "MMM D, YYYY",
+      "separator": " - ",
+      "applyLabel": "Apply",
+      "cancelLabel": "Cancel",
+      "fromLabel": "From",
+      "toLabel": "To",
+      "customRangeLabel": "Custom",
+      "weekLabel": "W",
+      "daysOfWeek": [
+      "Su",
+      "Mo",
+      "Tu",
+      "We",
+      "Th",
+      "Fr",
+      "Sa"
+      ],
+      "monthNames": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+      ],
+      "firstDay": 1
     },
     "alwaysShowCalendars": true,
     "startDate": "01/27/2018",
