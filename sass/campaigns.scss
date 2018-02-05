@@ -1,0 +1,14 @@
+.campaigns {
+  width: 100%;
+  margin: 10px 0;
+  padding: 0 24px;
+  box-shadow: 0 8px 16px rgba(121, 143, 150, 0.24), 0 0 8px rgba(121, 143, 150, 0.12);
+  border-radius: 3px;
+  background-color: #ffffff;
+
+  .dataTables_paginate.paging_simple_numbers:nth-of-type(1) {
+    position: static;
+    top: 0;
+    right: 0;
+  }
+}

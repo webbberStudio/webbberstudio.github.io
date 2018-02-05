@@ -57,6 +57,7 @@
     background-image: url("../img/loop.png");
     background-repeat: no-repeat;
     background-position: 10px center;
+    box-shadow: none;
     &:hover, &.active {
       box-shadow: 0 8px 16px rgba(121, 143, 150, 0.24), 0 0 8px rgba(121, 143, 150, 0.12);
       border-radius: 3px;

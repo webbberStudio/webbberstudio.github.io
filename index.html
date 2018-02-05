@@ -206,8 +206,10 @@
             </div>
 
           </div>
-
+          
         </div>
+
+
 
         <div class="date-pickers d-flex flex-row">
           <div class="d-flex flex-column">
@@ -221,6 +223,8 @@
             <input type="text" id="datePicker2" class="form-control datepicker">
           </div>
         </div>
+
+        
         <div class="export">
 
           <div class="data-export data-copy"></div>
@@ -229,7 +233,133 @@
         </div>
       </div>
 
+      <div class="drop-block campaigns">
+        <h3>Filters Campaigns:</h3>
 
+        <div class="row">
+          <div class="col-6">
+
+            <div class="d-flex flex-column basic-view">
+              <span class="title">Show</span>
+              <div class="d-flex flex-row">
+                <select class="js-example-basic-single length dubleArrow select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                  <option value="10">10 </option>
+                  <option value="25">25 </option>
+                </select>
+
+                <div class="label"> 
+                  <input type="text" class="form-control search" id="search-campaigns" placeholder="Search">
+
+                  <div class="search-close"></div>
+                </div>
+              </div>
+            </div>
+
+            <table id="example1" class="display" cellspacing="0" width="100%" data-page-length='10'>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="campAll">
+                      <label class="custom-control-label" for="campAll"></label>
+                    </div>
+                  </th>
+                  <th>SKU</th>
+                  <th>Name</th>
+                  <th>image</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp1">
+                      <label class="custom-control-label" for="camp1"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">3K-CVS8-4O1B</a></td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.adipisci reiciendis doloremque eum corporis officia. Quasi tempore, eius!
+                  </td>
+                  <td><img src="img/tpl_img.png" alt=""></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp1">
+                      <label class="custom-control-label" for="camp1"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">3K-CVS8-4O1B</a></td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.adipisci reiciendis doloremque eum corporis officia. Quasi tempore, eius!
+                  </td>
+                  <td><img src="img/tpl_img.png" alt=""></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp1">
+                      <label class="custom-control-label" for="camp1"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">3K-CVS8-4O1B</a></td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.adipisci reiciendis doloremque eum corporis officia. Quasi tempore, eius!
+                  </td>
+                  <td><img src="img/tpl_img.png" alt=""></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp1">
+                      <label class="custom-control-label" for="camp1"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">3K-CVS8-4O1B</a></td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.adipisci reiciendis doloremque eum corporis officia. Quasi tempore, eius!
+                  </td>
+                  <td><img src="img/tpl_img.png" alt=""></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp1">
+                      <label class="custom-control-label" for="camp1"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">3K-CVS8-4O1B</a></td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.adipisci reiciendis doloremque eum corporis officia. Quasi tempore, eius!
+                  </td>
+                  <td><img src="img/tpl_img.png" alt=""></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp2">
+                      <label class="custom-control-label" for="camp2"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">3K-CVS8-4O1B</a></td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.adipisci reiciendis doloremque eum corporis officia. Quasi tempore, eius!
+                  </td>
+                  <td><img src="img/tpl_img.png" alt=""></td>
+
+                </tr>
+              </tbody>
+            </table>
+
+
+          </div>
+        </div>
+      </div>
 
       <div class="legend d-flex align-items-center">
 
@@ -1095,1158 +1225,7 @@
 
 
 
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
 
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>
-              123
-            </td>
-            <td>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="tableCheck1">
-                <label class="custom-control-label" for="tableCheck1"></label>
-              </div>
-            </td>
-            <td><a href="#">dbu mjuufs cpy</a></td>
-            <td>
-              <select class="js-example-basic-single state dubleArrow">
-                <option value="1">Enabled</option>
-                <option value="2">Paused</option>
-                <option value="3">Archived</option>
-              </select>
-            </td>
-            <td><a href="#">mjuufsktz</a></td>
-            <td>
-              <div class="d-flex">
-                <select class="js-example-basic-single state dubleArrow">
-                  <option value="1">Enabled</option>
-                  <option value="2">Paused</option>
-                  <option value="3">Archived</option>
-                </select>
-                <div class="ml-1">
-                  <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
-                  <small class="table-adgroup">
-                    <select class="js-example-basic-single state dubleArrow">
-                      <option value="1">Enabled</option>
-                      <option value="2">Paused</option>
-                      <option value="3">Archived</option>
-                    </select>
-                    Adgroup 1
-                  </small>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="table-edited-value">
-                <input type=text" value="1.81">
-                <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
-                <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
-              </div>
-              <small>1.20</small>
-            </td>
-            <td>
-              <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
-            </td>
-            <td class="color-drop-table">
-              <select class="js-example-basic-single table dubleArrow">
-                <option value="1">CE</option>
-                <option value="2">VE</option>
-                <option value="3">PB</option>
-              </select>
-            </td>
-            <td>broad</td>
-            <td>208&nbsp;112</td>
-            <td>421&nbsp;235</td>
-            <td>0.0023</td>
-            <td>2&nbsp;921&nbsp;145</td>
-            <td>1&nbsp;523</td>
-            <td>0.05</td>
-            <td>2&nbsp;312</td>
-            <td>
-              <div class="table-actions">
-                <button class="table-actions-btn table-actions-btn-stats"></button>
-                <button class="table-actions-btn table-actions-btn-edit"></button><br>
-                <button class="table-actions-btn table-actions-btn-automate"></button>
-                <button class="table-actions-btn table-actions-btn-settings"></button>
-              </div>
-            </td>
-          </tr>
 
 
         </tbody>

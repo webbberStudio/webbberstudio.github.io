@@ -105,6 +105,31 @@ $(document).ready(function() {
     }]
 
   } );
+  var table  = $('#example1').DataTable( {
+    "dom": 'rtp',
+    "pagingType": 'simple_numbers',
+    "columnDefs":  [{
+      "targets": [0, 1, 2, 3],
+      'className': 'pl-1'
+    },
+    {
+      "targets": [1],
+      'className': 'px-0'
+    },
+    {
+      "targets": [2],
+      'className': 'pl-0'
+    },
+    {
+      "targets": [3],
+      'className': 'pl-1 pr-0'
+    },
+    {
+      "targets": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+      'className': 'pl-0 pr-2'
+    }]
+
+  } )
   $('.visible-container label').on( 'click', function (e) {
     var val = $(this).prev().attr('id').slice(11);
     val = parseInt(val) + 1;
