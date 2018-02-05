@@ -73,7 +73,7 @@ table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.st
   color: #fd6f6a;
 }
 
-table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1, tbody tr.even>.sorting_1 a  {
   background-color: #eaf4fb;
   color: #fd6f6a;
 }
@@ -198,6 +198,7 @@ table.dataTable thead th, table.dataTable thead td {
     border: 0 !important;
     width: 47px !important;
     padding-right: 0px;
+    min-width: 47px;
 
     .select2-selection__arrow {
       right: 3px !important;
