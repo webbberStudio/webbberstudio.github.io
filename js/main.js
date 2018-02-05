@@ -157,8 +157,8 @@ $(document).ready(function() {
       'Last 7 Days': [moment().subtract(6, 'days'), moment()],
       'Last 30 Days': [moment().subtract(29, 'days'), moment()],
       'This Month': [moment().startOf('month'), moment().endOf('month')],
-      'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
     },
+    "linkedCalendars": false,
     "locale": {
       "format": "MMM D, YYYY",
       "separator": " - ",
@@ -169,36 +169,36 @@ $(document).ready(function() {
       "customRangeLabel": "Custom",
       "weekLabel": "W",
       "daysOfWeek": [
-      "Su",
-      "Mo",
-      "Tu",
-      "We",
-      "Th",
-      "Fr",
-      "Sa"
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat"
       ],
       "monthNames": [
-      "January",
-      "February",
-      "March",
-      "April",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
       "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
       ],
       "firstDay": 1
     },
     "alwaysShowCalendars": true,
-    "startDate": "01/27/2018",
-    "endDate": "02/02/2018",
+    //"startDate": "01/27/2018",
+    //"endDate": "02/02/2018",
     "opens": "left"
   }, function(start, end, label) {
-    console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+    //console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
   });
 
   //ui helper

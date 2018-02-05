@@ -1,6 +1,3 @@
-.dataTables_wrapper {
-  // padding: 0 8px;
-}
 .dataTable {
   border: 0 !important;
 
@@ -44,9 +41,9 @@
   }
 
   .even {
-    background: #eaf4fb !important;
+    background: #ffffff !important;
     td {
-      border-bottom: 1px #eaf4fb solid;
+      border-bottom: 1px #ffffff solid;
     }
   }
 }
@@ -56,9 +53,11 @@ td {
   border-top: 1px #f7fafd solid !important;
   border-bottom: 1px #f7fafd solid;
   white-space: nowrap;
+  color: #000;
 
   a {
     white-space: nowrap;
+    color: #000;
   }
 }
 
@@ -76,8 +75,8 @@ table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.st
   color: #fd6f6a;
 }
 
-table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1, tbody tr.even>.sorting_1 a  {
-  background-color: #eaf4fb;
+table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+  background-color: #fff;
   color: #fd6f6a;
 }
 
@@ -263,7 +262,7 @@ table.dataTable thead th, table.dataTable thead td {
 
   .table-adgroup {
     display: block;
-    font-size: 10px;
+    font-size: 12px;
     color: #798f96;
 
     .select2-container {
@@ -310,20 +309,4 @@ table.dataTable thead th, table.dataTable thead td {
   &.archived {
     background-color: #cfd8dc;
   }
-}
-
-table.dataTable tbody th, table.dataTable tbody td {
-  padding: 8px 0px;
-}
-
-table.dataTable tbody th, table.dataTable tbody td {
-  padding: 7px 0px;
-  font-size: 14px;
-  font-weight: 600;
-}
-table.dataTable .table-gray-value, table.dataTable .select2-selection, table.dataTable input  {
-  font-size: 12px
-}
-table.dataTable .d-flex > .select2 {
-  margin-top: 2px;
 }
