@@ -263,11 +263,19 @@ $(document).ready(function() {
     $('.visible-container').toggleClass('active')
   })
 
+  //campaigns
   $('.btn-filter-campaigns').on('click', function () {
-    console.log(123);
     $(this).toggleClass('active')
     $('.drop-block').toggleClass('active')
   })
+
+  $('.drop-block .close').on('click', function() {
+    $('.drop-block').toggleClass('active')
+  })
+
+  // $('#myModal').on('shown.bs.modal', function () {
+  //   $('#myInput').trigger('focus')
+  // })
 });
 
 
