@@ -1,3 +1,60 @@
 .filters-input {
   width: 316px;
+  margin: 0 0 14px 0;
+
+  &-single .filters-input-group {
+    padding-right: 3px;
+    overflow: hidden;
+    position: relative;
+    max-height: 32px;
+  }
+
+  .select2-container {
+    background: #f7fafd !important;
+    width: 309px !important;
+    border: 1px solid #b8c4c9;
+    height: 30px;
+  }
+
+  &-group {
+    background: #f7fafd;
+    border: 1px #b8c4c9 solid;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 3px 0;
+  }
+
+  input {
+    border: 0;
+    width: 100%;
+    padding: 0px 8px;
+    background: #f7fafd;
+    outline: 0;
+  }
+
+  &-separator {
+    background: #c5e2f7;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 10px;
+      background: #0083e3;
+    }
+
+    &-help:after {
+      background: url(../img/help.png);
+      width: 14px;
+      height: 14px;
+    }
+  }
 }
