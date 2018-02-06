@@ -269,19 +269,21 @@ $(document).ready(function() {
     $('[data-campaigns-filter-container]').toggleClass('active')
   })
 
-  $('.drop-block .close').on('click', function() {
-    $('.drop-block').toggleClass('active')
-  })
-
   $('[data-filter-btn]').on('click', function () {
     $(this).toggleClass('active')
     $('[data-filter-container]').toggleClass('active')
   })
 
+  $('[data-campaigns-filter-container] .close').on('click', function() {
+    $('[data-filter-campaigns-btn]').toggleClass('active')
+    $(this).parents('[data-campaigns-filter-container]').toggleClass('active')
+  })
 
-  // $('#myModal').on('shown.bs.modal', function () {
-  //   $('#myInput').trigger('focus')
-  // })
+  $('[data-filter-container] .close').on('click', function() {
+    $('[data-filter-btn]').toggleClass('active')
+    $(this).parents('[data-filter-container]').toggleClass('active')
+  })
+
 });
 
 
