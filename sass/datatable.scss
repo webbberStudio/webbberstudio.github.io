@@ -310,3 +310,19 @@ table.dataTable thead th, table.dataTable thead td {
     background-color: #cfd8dc;
   }
 }
+
+table.dataTable tbody th, table.dataTable tbody td {
+  padding: 8px 0px;
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+  padding: 7px 0px;
+  font-size: 14px;
+  font-weight: 600;
+}
+table.dataTable .table-gray-value, table.dataTable .select2-selection, table.dataTable input  {
+  font-size: 12px
+}
+table.dataTable .d-flex > .select2 {
+  margin-top: 2px;
+}

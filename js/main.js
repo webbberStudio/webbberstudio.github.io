@@ -125,7 +125,7 @@ $(document).ready(function() {
       'className': 'pl-1 pr-0'
     },
     {
-      "targets": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+      "targets": [0,1,2,3],
       'className': 'pl-0 pr-2'
     }]
 
@@ -150,15 +150,15 @@ $(document).ready(function() {
   } );
 
   //datapicker
-  $('#datePicker1, #datePicker2').daterangepicker({
+  $('#datePicker2').daterangepicker({
     "ranges": {
       'Today': [moment(), moment()],
       'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
       'Last 7 Days': [moment().subtract(6, 'days'), moment()],
       'Last 30 Days': [moment().subtract(29, 'days'), moment()],
       'This Month': [moment().startOf('month'), moment().endOf('month')],
+      'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
     },
-    "linkedCalendars": false,
     "locale": {
       "format": "MMM D, YYYY",
       "separator": " - ",
@@ -169,36 +169,36 @@ $(document).ready(function() {
       "customRangeLabel": "Custom",
       "weekLabel": "W",
       "daysOfWeek": [
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat"
+      "Su",
+      "Mo",
+      "Tu",
+      "We",
+      "Th",
+      "Fr",
+      "Sa"
       ],
       "monthNames": [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
+      "January",
+      "February",
+      "March",
+      "April",
       "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec"
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
       ],
       "firstDay": 1
     },
     "alwaysShowCalendars": true,
-    //"startDate": "01/27/2018",
-    //"endDate": "02/02/2018",
+    "startDate": "01/27/2018",
+    "endDate": "02/02/2018",
     "opens": "left"
   }, function(start, end, label) {
-    //console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+    console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
   });
 
   //ui helper
