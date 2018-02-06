@@ -159,6 +159,7 @@ $(document).ready(function() {
       'This Month': [moment().startOf('month'), moment().endOf('month')],
       'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
     },
+    "linkedCalendars": false,
     "locale": {
       "format": "MMM D, YYYY",
       "separator": " - ",
@@ -194,8 +195,8 @@ $(document).ready(function() {
       "firstDay": 1
     },
     "alwaysShowCalendars": true,
-    "startDate": "01/27/2018",
-    "endDate": "02/02/2018",
+    //"startDate": "01/27/2018",
+    //"endDate": "02/02/2018",
     "opens": "left"
   }, function(start, end, label) {
     console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
