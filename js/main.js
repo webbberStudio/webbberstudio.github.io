@@ -264,14 +264,20 @@ $(document).ready(function() {
   })
 
   //campaigns
-  $('.btn-filter-campaigns').on('click', function () {
+  $('[data-filter-campaigns-btn]').on('click', function () {
     $(this).toggleClass('active')
-    $('.drop-block').toggleClass('active')
+    $('[data-campaigns-filter-container]').toggleClass('active')
   })
 
   $('.drop-block .close').on('click', function() {
     $('.drop-block').toggleClass('active')
   })
+
+  $('[data-filter-btn]').on('click', function () {
+    $(this).toggleClass('active')
+    $('[data-filter-container]').toggleClass('active')
+  })
+
 
   // $('#myModal').on('shown.bs.modal', function () {
   //   $('#myInput').trigger('focus')

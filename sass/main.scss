@@ -211,8 +211,8 @@
   }
   .drop-block {
     position: relative;
-    display: block;
-    opacity: 1;
+    display: none;
+    opacity: 0;
     transition: .3s ease;
 
     &.active {
@@ -225,9 +225,15 @@
       right: 19px;
     }
   }
+  .table {
+    margin-bottom: 0;
+  }
 
   footer {
-
+    background-color: #f7fafd;
+    padding: 8px 24px;
+    margin: 0;
+    color: #798f96;
   }
 }
 

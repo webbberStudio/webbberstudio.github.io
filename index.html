@@ -105,8 +105,8 @@
         <div class="filters">
           <div class="group">
             <button class="btn icon visible btn-outline-primary">Column visability</button>
-            <button class="btn icon filter btn-primary btn-filter-campaigns">Filters Campaigns</button>
-            <button class="btn icon filter btn-primary">Filters</button>
+            <button data-filter-campaigns-btn class="btn icon filter btn-primary">Filters Campaigns</button>
+            <button data-filter-btn class="btn icon filter btn-primary">Filters</button>
           </div>
 
           <div class="visible-container">
@@ -233,7 +233,7 @@
         </div>
       </div>
 
-      <div class="drop-block filter-campaigns">
+      <div data-campaigns-filter-container class="drop-block filter-campaigns">
         <h3>Filters Campaigns:</h3>
 
         <div class="row">
@@ -602,143 +602,146 @@
       <span aria-hidden="true">&times;</span>
     </button>
 
-    
+
   </div>
-  <div class="drop-block campaigns">
-        <h3>Filters:</h3>
+  <div data-filter-container class="drop-block filter-campaigns">
+    <h3>Filters:</h3>
 
-        <div class="row">
-          <div class="col-3 offset-3">
+    <div class="row">
+      <div class="col-3 offset-3">
 
-            <div class="d-flex flex-column basic-view filters-input">
-              <span class="title">Conversion</span>
-              <div class="d-flex justify-content-between filters-input-group">
-                <input type="number" placeholder="Min" name="filters1">
-                <div class="filters-input-separator"></div>
-                <input type="number" placeholder="Max" name="filters2">
-              </div>
-            </div>
-
-            <div class="d-flex flex-column basic-view filters-input">
-              <span class="title">Clicks</span>
-              <div class="d-flex justify-content-between filters-input-group">
-                <input type="number" placeholder="Min" name="filters1">
-                <div class="filters-input-separator"></div>
-                <input type="number" placeholder="Max" name="filters2">
-              </div>
-            </div>
-
-            <div class="d-flex flex-column basic-view filters-input">
-              <span class="title">CPC</span>
-              <div class="d-flex justify-content-between filters-input-group">
-                <input type="number" placeholder="Min" name="filters1">
-                <div class="filters-input-separator"></div>
-                <input type="number" placeholder="Max" name="filters2">
-              </div>
-            </div>
-
-            <div class="d-flex flex-column basic-view filters-input">
-              <span class="title">CTR</span>
-              <div class="d-flex justify-content-between filters-input-group">
-                <input type="number" placeholder="Min" name="filters1">
-                <div class="filters-input-separator"></div>
-                <input type="number" placeholder="Max" name="filters2">
-              </div>
-            </div>
-
-            <div class="d-flex flex-column basic-view filters-input">
-              <span class="title">Net</span>
-              <div class="d-flex justify-content-between filters-input-group">
-                <input type="number" placeholder="Min" name="filters1">
-                <div class="filters-input-separator"></div>
-                <input type="number" placeholder="Max" name="filters2">
-              </div>
-            </div>
-
-            <div class="d-flex flex-column basic-view filters-input">
-              <span class="title">Spend</span>
-              <div class="d-flex justify-content-between filters-input-group">
-                <input type="number" placeholder="Min" name="filters1">
-                <div class="filters-input-separator"></div>
-                <input type="number" placeholder="Max" name="filters2">
-              </div>
-            </div>
-
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Conversion</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
           </div>
+        </div>
 
-          <div class="col-3">
-
-            <div class="d-flex flex-column basic-view filters-input">
-              <span class="title">Revenue</span>
-              <div class="d-flex justify-content-between filters-input-group">
-                <input type="number" placeholder="Min" name="filters1">
-                <div class="filters-input-separator"></div>
-                <input type="number" placeholder="Max" name="filters2">
-              </div>
-            </div>
-
-            <div class="d-flex flex-column basic-view filters-input">
-              <span class="title">Impression</span>
-              <div class="d-flex justify-content-between filters-input-group">
-                <input type="number" placeholder="Min" name="filters1">
-                <div class="filters-input-separator"></div>
-                <input type="number" placeholder="Max" name="filters2">
-              </div>
-            </div>
-
-            <div class="d-flex flex-column basic-view filters-input">
-              <span class="title">Orders</span>
-              <div class="d-flex justify-content-between filters-input-group">
-                <input type="number" placeholder="Min" name="filters1">
-                <div class="filters-input-separator"></div>
-                <input type="number" placeholder="Max" name="filters2">
-              </div>
-            </div>
-
-            <div class="d-flex flex-column basic-view filters-input">
-              <span class="title">Exact</span>
-              <div class="d-flex justify-content-between filters-input-group">
-                <input type="number" placeholder="Min" name="filters1">
-                <div class="filters-input-separator"></div>
-                <input type="number" placeholder="Max" name="filters2">
-              </div>
-            </div>
-
-            <div class="d-flex flex-column basic-view filters-input filters-input-single">
-              <span class="title">Keyword</span>
-              <div class="d-flex justify-content-between filters-input-group">
-                <input type="text" placeholder="Keyword" name="filters1">
-                <div class="filters-input-separator filters-input-separator-help"></div>
-              </div>
-            </div>
-
-            <div class="d-flex flex-column basic-view filters-input filters-input-single">
-              <span class="title">Keyword</span>
-              <div class="d-flex justify-content-between filters-input-group">
-                <input type="text" placeholder="Keyword" name="filters1">
-                <div class="filters-input-separator filters-input-separator-help"></div>
-              </div>
-            </div>
-
-            <div class="d-flex flex-column basic-view filters-input filters-input-single">
-              <span class="title">Keyword</span>
-              <select class="js-example-basic-single length dubleArrow">
-                <option value="10">10 </option>
-                <option value="25">25 </option>
-              </select>
-            </div>
-
-
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Clicks</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
           </div>
+        </div>
 
-          <div class="row">
-            <div class="col-12 align-right">
-              <a href="#" class="btn">Apply</a>
-            </div>
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">CPC</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
           </div>
+        </div>
 
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">CTR</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Net</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Spend</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-3">
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Revenue</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Impression</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Orders</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Exact</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input filters-input-single">
+          <span class="title">Keyword</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="text" placeholder="Keyword" name="filters1">
+            <div class="filters-input-separator filters-input-separator-help"></div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input filters-input-single">
+          <span class="title">Keyword</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="text" placeholder="Keyword" name="filters1">
+            <div class="filters-input-separator filters-input-separator-help"></div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input filters-input-single">
+          <span class="title">Keyword</span>
+          <select class="js-example-basic-single length dubleArrow">
+            <option value="10">10 </option>
+            <option value="25">25 </option>
+          </select>
+        </div>
+
+
+      </div>
+
+      <div class="row">
+        <div class="col-12 align-right">
+          <a href="#" class="btn">Apply</a>
         </div>
       </div>
+
+    </div>
+    <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
   <div class="legend d-flex align-items-center">
 
     <div class="indicator d-flex align-items-center">
@@ -1657,7 +1660,7 @@
         </button>
       </div>
       <div class="modal-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illo aspernatur distinctio et beatae, atque. Aut, totam a eum! Dolore?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illo aspernatur distinctio et beatae, atque. Aut, totam a eum! Dolore?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -1668,7 +1671,7 @@
 </div>
 
 <footer> 
-    <p>© ppc.tools</p>
+  <p>&copy; ppc.tools</p>
 </footer>
 
 </div>
