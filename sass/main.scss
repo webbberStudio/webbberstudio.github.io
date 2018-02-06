@@ -10,6 +10,7 @@
   @import "tablepagin.scss";
   @import "selected.scss";
   @import "campaigns.scss";
+  @import "filters_input.scss";
 
   .navbar-collapse {
     flex-basis: auto;
@@ -210,8 +211,8 @@
   }
   .drop-block {
     position: relative;
-    display: none;
-    opacity: 0;
+    display: block;
+    opacity: 1;
     transition: .3s ease;
 
     &.active {
@@ -223,6 +224,10 @@
       top: 7px;
       right: 19px;
     }
+  }
+
+  footer {
+
   }
 }
 

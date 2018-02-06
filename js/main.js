@@ -79,7 +79,7 @@ $(document).ready(function() {
     templateResult: formatState2,
     dropdownCssClass: 'icons'
   });
-
+  
 
 
   // DataTabless
