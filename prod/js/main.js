@@ -83,7 +83,7 @@ $(document).ready(function() {
 
 
   // DataTabless
-  var table  = $('#example').DataTable( {
+  var table1  = $('#example').DataTable( {
     "dom": 'prtp',
     'order': [[ 2, "asc" ]],
     "pagingType": 'simple_numbers',
@@ -106,12 +106,12 @@ $(document).ready(function() {
     }]
 
   } );
-  var table  = $('#filter-compaigns1').DataTable( {
+  var table2  = $('#filter-compaigns1').DataTable( {
     "dom": 'rtp',
     "pagingType": 'simple_numbers',
     'order': [[ 1, "asc" ]],
     "columnDefs":  [
-    { "width": "30px", "targets": 0 },
+    { "width": "30", "targets": 0 },
     {
       "targets": [0, 3],
       "orderable": false, 
@@ -139,12 +139,12 @@ $(document).ready(function() {
     }]
 
   } )
-  var table  = $('#filter-compaigns2').DataTable( {
+  var table3  = $('#filter-compaigns2').DataTable( {
     "dom": 'rtp',
     "pagingType": 'simple',
     'order': [[ 1, "asc" ]],
     "columnDefs":  [
-    { "width": "30px", "targets": 0 },
+    {  "targets": 0, "width": "30px" },
     {
       "targets": [0],
       "orderable": false, 
@@ -167,7 +167,7 @@ $(document).ready(function() {
   $('.visible-container label').on( 'click', function (e) {
     var val = $(this).prev().attr('id').slice(11);
     val = parseInt(val) + 1;
-    var column = table.column( val );
+    var column = table1.column( val );
     console.log($(this).prev().attr('id').slice(11));
     column.visible( ! column.visible() );
 
@@ -175,12 +175,32 @@ $(document).ready(function() {
 
   $('.length').on( 'change', function () {
     var value = $(this).val()
-    table.page.len( value ).draw();
+    table1.page.len( value ).draw();
   } );
 
   $('.search').on( 'keyup', function () {
     var value = $(this).val()
-    table.search( value ).draw();
+    table1.search( value ).draw();
+  } );
+
+  $('.length').on( 'change', function () {
+    var value = $(this).val()
+    table3.page.len( value ).draw();
+  } );
+
+  $('.search').on( 'keyup', function () {
+    var value = $(this).val()
+    table3.search( value ).draw();
+  } );
+
+  $('.length').on( 'change', function () {
+    var value = $(this).val()
+    table2.page.len( value ).draw();
+  } );
+
+  $('.search').on( 'keyup', function () {
+    var value = $(this).val()
+    table2.search( value ).draw();
   } );
 
   //datapicker
