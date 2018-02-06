@@ -262,6 +262,12 @@ $(document).ready(function() {
     $(this).toggleClass('active')
     $('.visible-container').toggleClass('active')
   })
+
+  $('.btn-filter-campaigns').on('click', function () {
+    console.log(123);
+    $(this).toggleClass('active')
+    $('.drop-block').toggleClass('active')
+  })
 });
 
 

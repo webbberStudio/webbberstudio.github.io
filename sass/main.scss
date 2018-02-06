@@ -1,6 +1,6 @@
 
-  @import "select.scss";
-  @import "datepicker.scss";
+@import "select.scss";
+@import "datepicker.scss";
 .wrapper_searchterms {
   @import "button.scss";
   @import "checkbox.scss";
@@ -205,8 +205,25 @@
         }
       }
     }
-  }
 
+
+  }
+  .drop-block {
+    position: relative;
+    display: none;
+    opacity: 0;
+    transition: .3s ease;
+
+    &.active {
+      display: block;
+      opacity: 1;
+    }
+    .close {
+      position: absolute;
+      top: 7px;
+      right: 19px;
+    }
+  }
 }
 
 .round {

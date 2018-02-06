@@ -1,4 +1,4 @@
-.campaigns {
+.filter-campaigns {
   width: 100%;
   margin: 16px 0;
   padding: 28px 24px;
@@ -25,5 +25,57 @@
     position: static;
     top: 0;
     right: 0;
+    margin-top: 20px;
+  }
+
+  .btn {
+    color: #fff !important;
+    outline: 0;
+    box-shadow: none;
+    border: 0;
+    font-size: 12px;
+    padding: 0px 23px;
+    margin: 0 18px 0 0;
+    opacity: .9;
+    &:hover {
+      opacity: 1;
+    }
+    &.btn.btn-secondary {
+      &:hover {
+        background-color: #5a6268;
+      }
+    }
+  }
+
+  .simple-pagin {
+    .dataTables_paginate.paging_simple {
+      margin-top: 20px;
+      transform: translate(50%);
+      margin-right: 50%;
+
+      .paginate_button {
+        &.next, &.previous  {
+          font-size: 11px;
+          width: auto;
+          border: solid 2px #e8ecef;
+          padding: 5px 15px;
+          height: initial;
+
+          &.disabled {
+            border: solid 2px transparent;
+
+          }
+        }
+        &.next {
+          padding-right: 30px;
+          background-position: right 12px center !important;
+        }
+        &.previous {
+          padding-left: 30px;
+          background-position: left 12px center !important;
+
+        }
+      }
+    }
   }
 }
