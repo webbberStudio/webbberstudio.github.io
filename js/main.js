@@ -108,10 +108,16 @@ $(document).ready(function() {
   var table  = $('#example1').DataTable( {
     "dom": 'rtp',
     "pagingType": 'simple_numbers',
-    "columnDefs":  [{
+    "columnDefs":  [
+    {
+      "targets": [0],
+      "orderable": false, 
+    },
+    {
       "targets": [0, 1, 2, 3],
       'className': 'pl-1'
     },
+    
     {
       "targets": [1],
       'className': 'px-0'
