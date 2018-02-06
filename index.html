@@ -233,37 +233,15 @@
         </div>
       </div>
 
-
-
-      <div class="drop-block campaigns">
-        <h3>Filters:</h3>
-
-        <div class="row">
-          <div class="col-6">
-
-            <div class="d-flex flex-column basic-view filters-input">
-              <span class="title">Show</span>
-              <div class="d-flex flex-row">
-                <input type="text" placeholder="Min">
-                <input type="text" placeholder="Max">
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-
-
       <div class="drop-block campaigns">
         <h3>Filters Campaigns:</h3>
 
         <div class="row">
           <div class="col-6">
 
-            <div class="d-flex flex-column basic-view">
+            <div class="d-flex flex-column basic-view py-3">
 
-              <div class="d-flex flex-row">
+              <div class="d-flex flex-row align-items-end">
                 <div class="d-flex flex-column">
                   <span class="title">Show</span>
                   <select class="js-example-basic-single length dubleArrow select2-hidden-accessible" tabindex="-1" aria-hidden="true">
@@ -280,7 +258,7 @@
               </div>
             </div>
 
-            <table id="example1" class="display responsive" cellspacing="0" width="100%" data-page-length='10'>
+            <table id="filter-compaigns1" class="display responsive" cellspacing="0" width="100%" data-page-length='10'>
               <thead>
                 <tr>
                   <th>
@@ -383,13 +361,83 @@
 
 
           </div>
+
+          <div class="col-6">
+
+           <div class="d-flex flex-column basic-view py-3">
+
+              <div class="d-flex flex-row align-items-end">
+                <div class="d-flex flex-column">
+                  <span class="title">Show</span>
+                  <select class="js-example-basic-single length dubleArrow select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                    <option value="10">10 </option>
+                    <option value="25">25 </option>
+                  </select>
+                </div>
+
+                <div class="label"> 
+                  <input type="text" class="form-control search" id="search-campaigns" placeholder="Search">
+
+                  <div class="search-close"></div>
+                </div>
+              </div>
+            </div>
+
+            <table id="filter-compaigns2" class="display responsive" cellspacing="0" width="100%" data-page-length='10'>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="campAll">
+                      <label class="custom-control-label" for="campAll"></label>
+                    </div>
+                  </th>
+                  <th>Campaigns</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp1">
+                      <label class="custom-control-label" for="camp1"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">Lorem ipsum dolor.</a></td>
+                
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp1">
+                      <label class="custom-control-label" for="camp1"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">Lorem ipsum dolor.</a></td>
+                
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp1">
+                      <label class="custom-control-label" for="camp1"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">Lorem ipsum dolor.</a></td>
+                
+                </tr>
+
+
+                </tr>
+              </tbody>
+            </table>
+
+
+          </div>
         </div>
       </div>
-
-
-
-
-
 
       <div class="legend d-flex align-items-center">
 

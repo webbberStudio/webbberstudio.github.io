@@ -85,6 +85,7 @@ $(document).ready(function() {
   // DataTabless
   var table  = $('#example').DataTable( {
     "dom": 'prtp',
+    'order': [[ 2, "asc" ]],
     "pagingType": 'simple_numbers',
     "columnDefs":  [{
       "targets": [0, 1, 7, 17],
@@ -105,12 +106,14 @@ $(document).ready(function() {
     }]
 
   } );
-  var table  = $('#example1').DataTable( {
+  var table  = $('#filter-compaigns1').DataTable( {
     "dom": 'rtp',
     "pagingType": 'simple_numbers',
+    'order': [[ 1, "asc" ]],
     "columnDefs":  [
+    { "width": "30px", "targets": 0 },
     {
-      "targets": [0],
+      "targets": [0, 3],
       "orderable": false, 
     },
     {
@@ -132,6 +135,31 @@ $(document).ready(function() {
     },
     {
       "targets": [0,1,2,3],
+      'className': 'pl-0 pr-2'
+    }]
+
+  } )
+  var table  = $('#filter-compaigns2').DataTable( {
+    "dom": 'rtp',
+    "pagingType": 'simple',
+    'order': [[ 1, "asc" ]],
+    "columnDefs":  [
+    { "width": "30px", "targets": 0 },
+    {
+      "targets": [0],
+      "orderable": false, 
+    },
+    {
+      "targets": [0, 1],
+      'className': 'pl-1'
+    },
+    
+    {
+      "targets": [1],
+      'className': 'px-0'
+    },
+    {
+      "targets": [0,1],
       'className': 'pl-0 pr-2'
     }]
 
@@ -210,7 +238,7 @@ $(document).ready(function() {
 
   //ui helper
   $( ".search" ).on('keyup', function() {
-    var input = $(".search")
+    var input = $(this)
     var val = input.val();
     val.length > 0 && val != "Default text" ? input.addClass('active') : input.removeClass('active')
     var hasClass = input.hasClass("active")
