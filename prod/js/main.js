@@ -304,6 +304,7 @@ $(document).ready(function() {
     $(this).parents('[data-filter-container]').toggleClass('active')
   })
 
+  $('.wrapper_searchterms').css({opacity: 1})
 });
 
 
