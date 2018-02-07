@@ -39,6 +39,8 @@ function formatStateCircle (state) {
 };
 
 $(document).ready(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+
   $('.table-edited-value input').on('focus', function() {
     $(this).parent().after('<div class="table-edited-value-holder"></div>');
     $(this).parent().addClass('active');
@@ -173,32 +175,32 @@ $(document).ready(function() {
 
   } );
 
-  $('.length').on( 'change', function () {
+  $('[data-change-legth1]').on( 'change', function () {
     var value = $(this).val()
     table1.page.len( value ).draw();
   } );
 
-  $('.search').on( 'keyup', function () {
+  $('[data-search-table-main]').on( 'keyup', function () {
     var value = $(this).val()
     table1.search( value ).draw();
   } );
 
-  $('.length').on( 'change', function () {
+  $('[data-change-legth3]').on( 'change', function () {
     var value = $(this).val()
     table3.page.len( value ).draw();
   } );
 
-  $('.search').on( 'keyup', function () {
+  $('[data-search-campaigns-filter-right]').on( 'keyup', function () {
     var value = $(this).val()
     table3.search( value ).draw();
   } );
 
-  $('.length').on( 'change', function () {
+  $('[data-change-legth2]').on( 'change', function () {
     var value = $(this).val()
     table2.page.len( value ).draw();
   } );
 
-  $('.search').on( 'keyup', function () {
+  $('[data-search-campaigns-filter-left]').on( 'keyup', function () {
     var value = $(this).val()
     table2.search( value ).draw();
   } );
@@ -264,9 +266,19 @@ $(document).ready(function() {
     var hasClass = input.hasClass("active")
   });
 
-  $('.search-close').on('click', function() {
-    table.search( '' ).draw();
-    $(".search").val('').removeClass('active');
+  $('[data-search-table-main] + .search-close').on('click', function() {
+    table1.search( '' ).draw();
+    $(this).prev().val('').removeClass('active');
+  })
+
+  $('[data-search-campaigns-filter-left] + .search-close').on('click', function() {
+    table2.search( '' ).draw();
+    $(this).prev().val('').removeClass('active');
+  })
+
+  $('[data-search-campaigns-filter-right] + .search-close').on('click', function() {
+    table3.search( '' ).draw();
+    $(this).prev().val('').removeClass('active');
   })
 
   $('.datepicker').on('click', function() {
@@ -303,7 +315,7 @@ $(document).ready(function() {
     $('[data-filter-btn]').toggleClass('active')
     $(this).parents('[data-filter-container]').toggleClass('active')
   })
-
+  
   $('.wrapper_searchterms').css({opacity: 1})
 });
 
