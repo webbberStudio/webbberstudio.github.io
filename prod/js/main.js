@@ -89,6 +89,7 @@ $(document).ready(function() {
 
   // DataTabless
   var table1  = $('#example').DataTable( {
+    fixedHeader: true,
     "dom": 'prtp',
     'order': [[ 2, "asc" ]],
     "pagingType": 'simple_numbers',
