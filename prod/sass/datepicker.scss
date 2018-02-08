@@ -1,0 +1,242 @@
+.datepicker {
+  height: 32px;
+  color: #798f96;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 28px 0 34px;
+  background-image: url('../img/calendar.png'), url('../img/double_arrow.png');
+  background-repeat: no-repeat;
+  background-position: 10px center, right 8px center;
+  box-shadow: none;
+  min-width: 200px;
+  
+  &.form-control {
+    box-shadow: none; 
+  }
+  &:hover, &.active {
+    background-color: #e4e9ea;
+    border-color: #798f96;
+    color: #263238;
+    background-image: url('../img/calendar_darken.png'), url('../img/double_arrow_darken.png');
+  }
+}
+
+.fast-date + .select2-container--default .select2-selection--single .select2-selection__rendered {
+  background-image: url('../img/calendar.png') !important;
+  padding: 0 28px 0 34px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  color: #798f96 ;
+}
+.fast-date + .select2-container--default .select2-selection--single .select2-selection__rendered {
+  background-image: url('../img/calendar.png') !important;
+  padding: 0 28px 0 34px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  color: #798f96 !important;
+}
+.fast-date + .select2-container--default.select2-container--open .select2-selection--single .select2-selection__rendered {
+  color: #263238 !important;
+  background-image: url('../img/calendar_darken.png') !important;
+}
+.fast-date + .select2-container--default:hover .select2-selection--single .select2-selection__rendered {
+  color: #263238 !important;
+  background-image: url('../img/calendar_darken.png') !important;
+}
+.fast-date + .select2-container.select2-container--open .select2-selection__arrow {
+  background-image: url(../img/double_arrow_darken.png);
+}
+.fast-date + .select2-container:hover .select2-selection__arrow {
+  background-image: url(../img/double_arrow_darken.png);
+}
+
+
+
+.daterangepicker.dropdown-menu .input-mini {
+  margin: 0 0 27px 0;
+  font-family: "Titillium Web" !important;
+}
+
+.daterangepicker.dropdown-menu {
+  width: 872px !important;
+  height: 366px;
+  box-shadow: 0 8px 16px rgba(121, 143, 150, 0.24), 0 0 8px rgba(121, 143, 150, 0.12);
+  border: 0;
+  padding: 25px 21px;
+
+  .left .daterangepicker_input {
+    padding-right: 0;
+  }
+
+  .calendar {
+    width: 291px;
+    max-width: 291px;
+
+    &.right {
+      margin-right: 10px;
+    }
+
+    &.left {
+      margin-right: 40px;
+    }
+  }
+
+  .calendar-table {
+    padding: 0; 
+    font-family: "Titillium Web" !important;
+
+    td {
+      font-size: 13px;
+      color: #141414;
+      width: 30px;
+      height: 35px;
+
+      &.off {
+        color: #999;
+      }
+    }
+  }
+
+  .ranges {
+    margin-right: 0;
+    font-family: "Titillium Web" !important;
+
+    ul {
+      width: 189px;
+    }
+
+    li {
+      background: #bbd4ff;
+      border: 1px solid #bbd4ff;
+      text-align: center;
+      padding: 7px 13px;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 11px;
+
+      &.active {
+        background: #2979ff;
+        border: 1px solid #2979ff;
+        box-shadow: 0 8px 16px rgba(121, 143, 150, 0.24), 0 0 8px rgba(121, 143, 150, 0.12);
+      }
+
+      &:hover {
+        background-color: #6ba2ff !important;
+        border: 1px solid #6ba2ff !important;
+      }
+    }
+  }
+
+  .prev.available {
+    background: url(../img/datapicker-prev.png) center no-repeat;
+    position: relative;
+    right: -30px;
+  }
+
+  .next.available {
+    background: url(../img/datapicker-next.png) center no-repeat;
+    position: relative;
+    left: -30px;
+  }
+
+  .range_inputs {
+    margin-top: 18px;
+    padding-top: 17px;
+    border-top: 1px #d8d8d8 solid;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 89px;
+    }
+
+    .btn-success {
+      background: #2979ff;
+      border: 1px solid #2979ff;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 7px 13px;
+    }
+
+    .btn-default {
+      background: #798f96;
+      border: 1px solid #798f96;
+      color: #fff;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 7px 13px;
+    }
+  }
+
+  [data-range-key="Last Month"] {
+    display: none;
+  }
+
+  .input-mini  {
+    box-shadow: none;
+    font-size: 12px;
+    padding-left: 40px;
+    font-weight: 600;
+    background-image: url('../img/calendar.png');
+    background-repeat: no-repeat;
+    background-position: 10px center, right 8px center;
+    color: #798f96; 
+    &.active, &:hover {
+      background-image: url('../img/calendar_darken.png');
+      color: #263238;
+    }
+  }
+  .calendar-table {
+    thead {
+      tr:first-child {
+        height: 20px;
+      }
+      tr:last-child {
+        height: 40px;
+      }
+    }
+    td {
+      font-size: 13px;
+      color: #141414;
+      width: 35px;
+      height: 34px;
+      border-bottom: 2px #ffffff solid;
+    }
+    .month, th {
+      color: #141414;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    td.in-range:not(.off) {
+      background-color: #cce6f9;
+    }
+    td.active:not(.off), td:hover:not(.off) {
+      background-color: #0083e3;
+      color: #fff;
+      border-radius: 3px;
+    }
+    td.end-date, td.start-date {
+      border-radius: 3px !important;
+    }
+
+
+  }
+
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+  padding: 8px 0px;
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+  padding: 7px 0px;
+  font-size: 14px;
+  font-weight: 600;
+}
+table.dataTable .table-gray-value, table.dataTable .select2-selection, table.dataTable input  {
+  font-size: 12px
+}
+table.dataTable .d-flex > .select2 {
+  margin-top: 2px;
+}
