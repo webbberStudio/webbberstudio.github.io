@@ -108,6 +108,12 @@ $(document).ready(function() {
     {
       "targets": [3],
       'className': 'pl-1 pr-0'
+    },{
+      "targets": [6,7,8,9,10,11,12,13,14,15,16],
+      'className': 'pl-1 pr-1'
+    },{
+      "targets": [3],
+      'className': 'pl-1 pr-0'
     }]
 
   } );
