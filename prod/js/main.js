@@ -75,7 +75,10 @@ $(document).ready(function() {
   $('.fast-date').select2({
     minimumResultsForSearch: -1
   });
-
+  $('.js-example-basic-multiple.length').select2({
+    minimumResultsForSearch: -1,
+    containerCssClass: 'multiple'
+  });
   $('.js-example-basic-single.actions').select2({
     minimumResultsForSearch: -1,
     templateResult: formatState2,
@@ -286,8 +289,7 @@ $(document).ready(function() {
   })
 
   $('.datepicker').on('hide.daterangepicker', function() {
-    $(this).toggleClass('active')
-    console.log(123);
+    $(this).toggleClass('active');
   })
 
   $('.visible').on('click', function() {
