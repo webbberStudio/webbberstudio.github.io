@@ -82,7 +82,8 @@ $(document).ready(function() {
   $('.js-example-basic-single.actions').select2({
     minimumResultsForSearch: -1,
     templateResult: formatState2,
-    dropdownCssClass: 'icons'
+    dropdownCssClass: 'icons',
+    containerCssClass: 'icons'
   });
   
 
@@ -97,16 +98,22 @@ $(document).ready(function() {
       "targets": [0, 1, 7, 17],
       "orderable": false, 
       'className': 'pl-1'
-    },
-    {
+    },{
       "targets": [1],
       'className': 'px-0'
-    },
-    {
+    },{
       "targets": [2],
       'className': 'pl-0'
-    },
-    {
+    },{
+     "targets": 8,
+     "width": "48px"
+    },{
+     "targets": 7,
+     "width": "63px"
+    },{
+     "targets": 6,
+     "width": "46px"
+    },{
       "targets": [3],
       'className': 'pl-1 pr-0'
     },{
