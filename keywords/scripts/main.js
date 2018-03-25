@@ -378,17 +378,10 @@ function initMiniGraph(elem, data) {
   console.log(elem);
   if (elem === undefined) return false;
   new Morris.Line({
-  // ID of the element in which to draw the chart.
   element: elem,
-  // Chart data records -- each entry in this array corresponds to a point on
-  // the chart.
   data: data,
-  // The name of the data record attribute that contains x-values.
   xkey: ['day'],
-  // A list of names of data record attributes that contain y-values.
   ykeys: ['Rank'],
-  // Labels for the ykeys -- will be displayed when you hover over the
-  // chart.
   smooth: false,
   lineWidth: 1,
   lineColors: ['#348aa3'],
@@ -403,41 +396,33 @@ function initMiniGraph(elem, data) {
 
 function initGraph(elem, data) {
   new Morris.Line({
-  // ID of the element in which to draw the chart.
   element: elem,
-  // Chart data records -- each entry in this array corresponds to a point on
-  // the chart.
   data: data,
-  // The name of the data record attribute that contains x-values.
   xkey: 'day',
-  // A list of names of data record attributes that contain y-values.
   ykeys: ['Rank'],
-  // Labels for the ykeys -- will be displayed when you hover over the
-  // chart.
   labels: ['Rank'],
   xLabelFormat: function (x) {
-            // var IndexToMonth = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-            // var month = IndexToMonth[ x.getMonth() ];
-            // console.log(x);
-            // var day = IndexToMonth[ x.getDay() ];
-            var date = moment(x).format("DD MMM");
-            console.log(date);
-            return date;
-          },
-          smooth: false,
-  // ymax: 70,
-  // ymin: -20,
+    var date = moment(x).format("DD MMM");
+    console.log(date);
+    return date;
+  },
+  smooth: false,
   goals: [1.0, -1.0],
   numLines: 5,
   lineWidth: 3,
   lineColors: ['#348aa3'],
   goalStrokeWidth: 0,
-  // eventLineColors: ['#000'],
   pointSize: 4,
   resize: true,
   grid: true,
   axes: true,
-  // verticalGrid: true
 });
 }
 
+$('#myModal').modal('show')
+
+
+$('[data-show-modal]').on('click', function (e) {
+  e.stopPropagation();
+  $('.modal-delete').modal('show')
+})

@@ -187,10 +187,10 @@
           </td>
           <td>
             <div class="table-actions ">
+              <button class="table-actions-btn table-actions-btn-add "></button>
               <button class="table-actions-btn table-actions-btn-stats "></button>
-              <button class="table-actions-btn table-actions-btn-edit "></button>
-              <button class="table-actions-btn table-actions-btn-automate "></button>
-              <button class="table-actions-btn table-actions-btn-settings "></button>
+              <button class="table-actions-btn table-actions-btn-upload "></button>
+              <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
             </div>
           </td>
         </tr>
@@ -234,10 +234,10 @@
           </td>
           <td>
             <div class="table-actions ">
+              <button class="table-actions-btn table-actions-btn-add "></button>
               <button class="table-actions-btn table-actions-btn-stats "></button>
-              <button class="table-actions-btn table-actions-btn-edit "></button>
-              <button class="table-actions-btn table-actions-btn-automate "></button>
-              <button class="table-actions-btn table-actions-btn-settings "></button>
+              <button class="table-actions-btn table-actions-btn-upload "></button>
+              <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
             </div>
           </td>
         </tr>
@@ -281,10 +281,10 @@
           </td>
           <td>
             <div class="table-actions ">
+              <button class="table-actions-btn table-actions-btn-add "></button>
               <button class="table-actions-btn table-actions-btn-stats "></button>
-              <button class="table-actions-btn table-actions-btn-edit "></button>
-              <button class="table-actions-btn table-actions-btn-automate "></button>
-              <button class="table-actions-btn table-actions-btn-settings "></button>
+              <button class="table-actions-btn table-actions-btn-upload "></button>
+              <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
             </div>
           </td>
         </tr>
@@ -295,8 +295,37 @@
 
 
   </div>
+  
 
+
+  <div class="modal modal-delete" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Delete?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to delete the following? Note: this cannot be undone.</p>
+          <div class="item">
+            <a class="title">kitty litter</a>
+            <p class="ident">32998740</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-const btn-outline" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-const btn-full">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
+
 <script type='text/template' id="child_table0">
 
   <table id="keyword-tracking-inner" class="keyword-tracking-inner" cellspacing="0 " width="100% " data-page-length='50'>
@@ -326,8 +355,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -363,9 +392,8 @@
         <td>
           <div class="table-actions ">
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-view "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -373,8 +401,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -410,9 +438,8 @@
         <td>
           <div class="table-actions ">
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-view "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -420,8 +447,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -457,9 +484,8 @@
         <td>
           <div class="table-actions ">
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-view "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -467,8 +493,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -503,10 +529,10 @@
         </td>
         <td>
           <div class="table-actions ">
+            <button class="table-actions-btn table-actions-btn-add "></button>
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-upload "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -514,8 +540,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -551,9 +577,8 @@
         <td>
           <div class="table-actions ">
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-view "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -591,8 +616,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -627,10 +652,10 @@
         </td>
         <td>
           <div class="table-actions ">
+            <button class="table-actions-btn table-actions-btn-add "></button>
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-upload "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -638,8 +663,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -674,10 +699,10 @@
         </td>
         <td>
           <div class="table-actions ">
+            <button class="table-actions-btn table-actions-btn-add "></button>
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-upload "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -685,8 +710,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -722,9 +747,8 @@
         <td>
           <div class="table-actions ">
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-view "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -732,8 +756,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -769,9 +793,8 @@
         <td>
           <div class="table-actions ">
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-view "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -779,8 +802,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -816,9 +839,8 @@
         <td>
           <div class="table-actions ">
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-view "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -856,8 +878,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -893,9 +915,8 @@
         <td>
           <div class="table-actions ">
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-view "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -903,8 +924,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -940,9 +961,8 @@
         <td>
           <div class="table-actions ">
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-view "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -950,8 +970,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -987,9 +1007,8 @@
         <td>
           <div class="table-actions ">
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-view "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -997,8 +1016,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -1034,9 +1053,8 @@
         <td>
           <div class="table-actions ">
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-view "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
@@ -1044,8 +1062,8 @@
       <tr>
         <td>
           <div class="d-flex flex-column">
-            <p><a href="#">kitty litter</a></p>
-            <p>32998740</p>
+            <p class="title"><a href="#">kitty litter</a></p>
+            <p class="secondary-blue">32998740</p>
           </div>
         </td>
         <td>
@@ -1081,9 +1099,8 @@
         <td>
           <div class="table-actions ">
             <button class="table-actions-btn table-actions-btn-stats "></button>
-            <button class="table-actions-btn table-actions-btn-edit "></button>
-            <button class="table-actions-btn table-actions-btn-automate "></button>
-            <button class="table-actions-btn table-actions-btn-settings "></button>
+            <button class="table-actions-btn table-actions-btn-view "></button>
+            <button data-show-modal class="table-actions-btn table-actions-btn-delete "></button>
           </div>
         </td>
       </tr>
