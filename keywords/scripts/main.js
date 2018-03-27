@@ -91,46 +91,6 @@ $(document).ready(function () {
     containerCssClass: 'icons'
   });
 
-
-
-  
-  // var table2 = $('#filter-compaigns1').DataTable({
-  //   'dom': 'rtp',
-  //   'pagingType': 'simple_numbers',
-  //   'order': [
-  //     [1, 'asc']
-  //   ],
-  //   'columnDefs': [{
-  //       'width': '30',
-  //       'targets': 0
-  //     },
-  //     {
-  //       'targets': [0, 3],
-  //       'orderable': false,
-  //     },
-  //     {
-  //       'targets': [0, 1, 2, 3],
-  //       'className': 'pl-1'
-  //     },
-  //     {
-  //       'targets': [1],
-  //       'className': 'px-0'
-  //     },
-  //     {
-  //       'targets': [2],
-  //       'className': 'pl-0'
-  //     },
-  //     {
-  //       'targets': [3],
-  //       'className': 'pl-1 pr-0'
-  //     },
-  //     {
-  //       'targets': [0, 1, 2, 3],
-  //       'className': 'pl-0 pr-2'
-  //     }
-  //   ]
-
-  // });
   $('.visible-container label').on('click', function (e) {
     var val = $(this).prev().attr('id').slice(11);
     val = parseInt(val) + 1;
@@ -293,23 +253,26 @@ var myDataTable = $('#keyword-tracking').DataTable({
   'pagingType': 'simple_numbers',
   'columnDefs': [{
     'targets': [0,1,2,3,4,5,6],
-    'className': 'pl-3 pr-3 bg-white'
+    'className': 'pl-3 pr-3 bg-white',
+  },{
+    "targets": [3, 4],
+    "orderable": false, 
   }]
 
 });
-var childTable = $('#keyword-tracking-inner').DataTable({
-  fixedHeader: true,
-  'dom': 'rt',
-  'order': [
-  [0, 'asc']
-  ],
-  'pagingType': 'simple_numbers',
-  'columnDefs': [{
-    'targets': [0,1,2,3,4,5,6],
-    'className': 'pl-3 pr-3'
-  }]
+// var childTable = $('#keyword-tracking-inner').DataTable({
+//   fixedHeader: true,
+//   'dom': 'rt',
+//   'order': [
+//   [0, 'asc']
+//   ],
+//   'pagingType': 'simple_numbers',
+//   'columnDefs': [{
+//     'targets': [0,1,2,3,4,5,6],
+//     'className': 'pl-3 pr-3'
+//   }]
 
-});
+// });
 
 
 
@@ -378,45 +341,45 @@ function initMiniGraph(elem, data) {
   console.log(elem);
   if (elem === undefined) return false;
   new Morris.Line({
-  element: elem,
-  data: data,
-  xkey: ['day'],
-  ykeys: ['Rank'],
-  smooth: false,
-  lineWidth: 1,
-  lineColors: ['#348aa3'],
-  goalStrokeWidth: 0,
-  pointSize: 2,
-  resize: true,
-  hideHover: 'always',
-  axes: false,
-  grid: false
-});
+    element: elem,
+    data: data,
+    xkey: ['day'],
+    ykeys: ['Rank'],
+    smooth: false,
+    lineWidth: 1,
+    lineColors: ['#348aa3'],
+    goalStrokeWidth: 0,
+    pointSize: 2,
+    resize: true,
+    hideHover: 'always',
+    axes: false,
+    grid: false
+  });
 }
 
 function initGraph(elem, data) {
   new Morris.Line({
-  element: elem,
-  data: data,
-  xkey: 'day',
-  ykeys: ['Rank'],
-  labels: ['Rank'],
-  xLabelFormat: function (x) {
-    var date = moment(x).format("DD MMM");
-    console.log(date);
-    return date;
-  },
-  smooth: false,
-  goals: [1.0, -1.0],
-  numLines: 5,
-  lineWidth: 3,
-  lineColors: ['#348aa3'],
-  goalStrokeWidth: 0,
-  pointSize: 4,
-  resize: true,
-  grid: true,
-  axes: true,
-});
+    element: elem,
+    data: data,
+    xkey: 'day',
+    ykeys: ['Rank'],
+    labels: ['Rank'],
+    xLabelFormat: function (x) {
+      var date = moment(x).format("DD MMM");
+      console.log(date);
+      return date;
+    },
+    smooth: false,
+    goals: [1.0, -1.0],
+    numLines: 5,
+    lineWidth: 3,
+    lineColors: ['#348aa3'],
+    goalStrokeWidth: 0,
+    pointSize: 4,
+    resize: true,
+    grid: true,
+    axes: true,
+  });
 }
 
 $('#myModal').modal('show')
