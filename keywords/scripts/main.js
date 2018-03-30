@@ -6,7 +6,7 @@ function formatState(state) {
     '<span><img src="img/flag/' + state.element.value.toLowerCase() +
     '.png" class="img-flag" /> ' +
     state.text + '</span>'
-    );
+  );
   return $state;
 }
 
@@ -18,7 +18,7 @@ function formatState2(state) {
     '<span><img src="img/selected_icon/' + state.element.dataset.icon +
     '.png" class="img-flag" /> ' +
     state.text + '</span>'
-    );
+  );
   return $state;
 }
 
@@ -27,19 +27,19 @@ function formatStateCircle(state) {
     return $(
       '<span><span class="round enabled"></span>' +
       state.text + '</span>'
-      );
+    );
   }
   if (state.id == 2) {
     return $(
       '<span><span class="round paused"></span>' +
       state.text + '</span>'
-      );
+    );
   }
   if (state.id == 3) {
     return $(
       '<span><span class="round archived"></span>' +
       state.text + '</span>'
-      );
+    );
   }
 }
 
@@ -150,27 +150,27 @@ $(document).ready(function () {
       'customRangeLabel': 'Custom',
       'weekLabel': 'W',
       'daysOfWeek': [
-      'Su',
-      'Mo',
-      'Tu',
-      'We',
-      'Th',
-      'Fr',
-      'Sa'
+        'Su',
+        'Mo',
+        'Tu',
+        'We',
+        'Th',
+        'Fr',
+        'Sa'
       ],
       'monthNames': [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December'
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
       ],
       'firstDay': 1
     },
@@ -227,36 +227,77 @@ $(document).ready(function () {
 
 
 // new js ===========================================================================
-var data = [
-{'day': '2017-05-18', 'Rank': 40},
-{'day': '2017-05-19', 'Rank': 10},
-{'day': '2017-05-20', 'Rank': 60},
-{'day': '2017-05-21', 'Rank': 0},
-{'day': '2017-05-22', 'Rank': 12},
-{'day': '2017-05-23', 'Rank': 0},
-{'day': '2017-05-24', 'Rank': 80},
-{'day': '2017-05-25', 'Rank': 10},
-{'day': '2017-05-26', 'Rank': 40},
-{'day': '2017-05-27', 'Rank': 10},
-{'day': '2017-05-28', 'Rank': 70},
-{'day': '2017-05-29', 'Rank': 30},
-{'day': '2017-05-30', 'Rank': 65},
-{'day': '2017-05-31', 'Rank': 21}
+var data = [{
+    'day': '2017-05-18',
+    'Rank': 40
+  },
+  {
+    'day': '2017-05-19',
+    'Rank': 10
+  },
+  {
+    'day': '2017-05-20',
+    'Rank': 60
+  },
+  {
+    'day': '2017-05-21',
+    'Rank': 0
+  },
+  {
+    'day': '2017-05-22',
+    'Rank': 12
+  },
+  {
+    'day': '2017-05-23',
+    'Rank': 0
+  },
+  {
+    'day': '2017-05-24',
+    'Rank': 80
+  },
+  {
+    'day': '2017-05-25',
+    'Rank': 10
+  },
+  {
+    'day': '2017-05-26',
+    'Rank': 40
+  },
+  {
+    'day': '2017-05-27',
+    'Rank': 10
+  },
+  {
+    'day': '2017-05-28',
+    'Rank': 70
+  },
+  {
+    'day': '2017-05-29',
+    'Rank': 30
+  },
+  {
+    'day': '2017-05-30',
+    'Rank': 65
+  },
+  {
+    'day': '2017-05-31',
+    'Rank': 21
+  }
 ];
 // DataTabless
 var myDataTable = $('#keyword-tracking').DataTable({
   fixedHeader: true,
   'dom': 'rt',
   'order': [
-  [0, 'asc']
+    [0, 'asc']
   ],
   'pagingType': 'simple_numbers',
   'columnDefs': [{
-    'targets': [0,1,2,3,4,5,6],
+    'targets': [0, 1, 2, 3, 4, 5, 6],
     'className': 'pl-3 pr-3 bg-white',
-  },{
+  }, {
     "targets": [3, 4],
-    "orderable": false, 
+    "orderable": false,
   }]
 
 });
@@ -277,10 +318,10 @@ var myDataTable = $('#keyword-tracking').DataTable({
 
 
 var ixdexOfRow;
-$('#keyword-tracking > tbody > tr').click(function(e){
+$('#keyword-tracking > tbody > tr').click(function (e) {
   e.preventDefault();
 
-  if($(this).hasClass('open')) {
+  if ($(this).hasClass('open')) {
     myDataTable.row(ixdexOfRow).child.hide();
     $(this).removeClass('open');
   } else {
@@ -288,57 +329,64 @@ $('#keyword-tracking > tbody > tr').click(function(e){
 
 
     // if(typeof myDataTable.row(0).child() == "undefined"){
-      var $table = $($('#child_table' + ixdexOfRow).html());
-      $table.css('width','100%');
-      var childTable = $table.DataTable({
-        fixedHeader: true,
-        'dom': 'rt',
-        'order': [
+    var $table = $($('#child_table' + ixdexOfRow).html());
+    $table.css('width', '100%');
+    var childTable = $table.DataTable({
+      fixedHeader: true,
+      'dom': 'rt',
+      'order': [
         [0, 'asc']
-        ],
-        'pagingType': 'simple_numbers',
-        'columnDefs': [{
-          'targets': [0,2,3,4,5,6],
-          'className': 'pl-3 pr-3'
-        },{
-          "targets": 1,
-          'className': 'width-fix'
-        }
-        ]
+      ],
+      'pagingType': 'simple_numbers',
+      'columnDefs': [{
+        'targets': [0, 2, 3, 4, 5, 6],
+        'className': 'pl-3 pr-3'
+      }, {
+        "targets": 1,
+        'className': 'width-fix'
+      }]
 
-      });
-      myDataTable.row(ixdexOfRow).child(
-        childTable.table().container()
-        );
+    });
+    myDataTable.row(ixdexOfRow).child(
+      childTable.table().container()
+    );
     // }
 
     myDataTable.row(ixdexOfRow).child.show();
     var miniGraph = $('#mini-graph').length;
-    if(miniGraph) {
+    if (miniGraph) {
       initMiniGraph('mini-graph', data)
     }
     $(this).addClass('open');
   }
-  
+
 });
 
-$(document).on('click', '.mini-graph' , function() {
+$(document).on('click', '.mini-graph', function () {
   console.log($(this));
-  if($(this).hasClass('open')) {
-    // myDataTable.row(ixdexOfRow).child.hide();
-    $(this).removeClass('open');
+  console.log($(this).hasClass('open'))
+  console.log($(this).parents('tr').next('tr'))
+  if ($(this).hasClass('open')) {
+    console.log(123)
+    $(this).find('.full-graph').hide();
+    $(this).removeClass('open')
+
   } else {
+
     $(this).parent().parent().after("<tr><td colspan=\"12\" class=\"full-graph\"><div id=\"full-graph\"></div><td></tr>")
     initGraph('full-graph', data)
+
+    $(this).find('.full-graph').hide();
+    $(this).addClass('open');
+
   }
-  
+
 })
 
 
 
 
 function initMiniGraph(elem, data) {
-  console.log(elem);
   if (elem === undefined) return false;
   new Morris.Line({
     element: elem,
@@ -366,7 +414,6 @@ function initGraph(elem, data) {
     labels: ['Rank'],
     xLabelFormat: function (x) {
       var date = moment(x).format("DD MMM");
-      console.log(date);
       return date;
     },
     smooth: false,
