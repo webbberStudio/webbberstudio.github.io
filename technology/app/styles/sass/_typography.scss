@@ -1,0 +1,85 @@
+html,
+body {
+  @extend %font-second-light;
+  color: $text-gray;
+  font-size: $root-font-size + px;
+  @include rem-line-height(26);
+}
+
+%font-head-styles {
+  @extend %font-main-bold;
+  color: $text-black;
+  text-transform: uppercase;
+}
+
+h1 {
+  @extend %font-head-styles;
+  @include rem-font-size(32);
+  @include rem-line-height(44);
+}
+
+h2 {
+  @extend %font-head-styles;
+  @include rem-font-size(24);
+}
+
+h3 {
+  @extend %font-head-styles;
+  @include rem-font-size(18);
+  @include rem-line-height(28);
+}
+
+h4 {
+  @extend %font-head-styles;
+  @include rem-font-size(16);
+  @include rem-line-height(26);
+}
+
+h5 {
+  @extend %font-head-styles;
+  @include rem-font-size(14);
+  @include rem-line-height(20);
+}
+
+.link {
+  color: $text-gray-light;
+  text-decoration: none;
+  transition: $control-elem-transition;
+  @include rem-font-size(14);
+
+  &:hover {
+    color: $text-black;
+    border-color: $text-black;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+
+  &--arrow {
+    display: inline-block;
+    padding-left: 28px;
+    background: url('../img/icons/link-arrow-right.png') left top 4px no-repeat;
+    background-size: 18px;
+    @include rem-font-size(16);
+    @extend %font-main-regular;
+  }
+
+  &--blacked {
+    color: $text-black;
+    @include rem-font-size(18);
+    @include rem-line-height(28);
+
+    &:hover {
+      text-decoration-color: transparent;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
+
+    &--small {
+      @include rem-font-size(14);
+    }
+  }
+}

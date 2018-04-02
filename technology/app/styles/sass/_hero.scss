@@ -1,0 +1,73 @@
+.hero {
+  background: #f5f5f5 url(../img/main-bg.jpg) center top / cover;
+  box-shadow: inset 0 118px 130px -35px rgba(255, 255, 255, 0.5),
+    inset 0px -6px 15px -6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+
+  &--slider-load &__slider {
+    opacity: 1 !important;
+    transition: ease 1s;
+  }
+
+  .hero__slider,
+  .lSSlideOuter,
+  .lSSlideWrapper,
+  .lslide,
+  .lslide .container {
+    height: 700px;
+  }
+
+  .lSPager {
+    position: absolute !important;
+    bottom: 46px;
+    text-align: left !important;
+    margin: auto !important;
+    left: 0;
+    right: 0;
+    padding-left: 15px !important;
+
+    .active a {
+      background-color: $bg-second !important;
+    }
+
+    a {
+      width: 12px !important;
+      height: 12px !important;
+      background: #fff !important;
+      box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.18);
+    }
+  }
+
+  .lslide:nth-child(1) img {
+    transform: translateX(-98px);
+  }
+
+  .lslide:nth-child(3) img {
+    transform: translateX(-78px);
+  }
+
+  .container {
+    position: relative;
+    overflow: auto;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__title {
+    margin-top: 228px;
+
+    &:after {
+      @extend %text-devider;
+      margin: 30px 0;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 76px;
+  }
+}

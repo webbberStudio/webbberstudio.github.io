@@ -1,0 +1,23 @@
+header.header
+  .container.d-flex.align-items-start.justify-content-between
+    a.header__logo(href='#')
+
+    nav.header__nav
+      ul.nav
+        each nav in navs
+          li.nav-item
+            a.nav-link(href=nav.url)= nav.title
+            
+            if nav.childs
+              ul
+                each child in nav.childs
+                  li
+                    a(href=child.url)= child.title
+
+    .header__menu.d-flex.align-items-center
+      .social.d-flex
+        a.social__link.social__in(href='#')
+        a.social__link.social__fb(href='#')
+        a.social__link.social__yt(href='#')
+
+      .header__btn-phone

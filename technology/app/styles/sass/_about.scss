@@ -1,0 +1,36 @@
+.about {
+  &:after {
+    @extend %devider;
+    margin-top: 44px;
+  }
+
+  &__photo {
+    margin: 9px 26px;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 76px 0 46px;
+  }
+
+  &__desc {
+    @include rem-line-height(32);
+
+    &:after {
+      @extend %text-devider;
+      background-color: $bg-main;
+    }
+  }
+
+  &__name {
+    @extend %font-main-regular;
+    @include rem-font-size(18);
+    color: $text-black;
+    margin-bottom: 11px;
+    margin-top: 3px;
+  }
+
+  &__sign {
+    margin: -57px 41px 0;
+  }
+}

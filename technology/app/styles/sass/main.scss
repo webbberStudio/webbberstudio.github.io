@@ -1,0 +1,31 @@
+$container-max-widths: (
+  sm: 375px,
+  md: 768px,
+  lg: 1200px,
+  xl: 1202px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 375px,
+  md: 768px,
+  lg: 1220px,
+  xl: 1600px
+);
+@import '../../libs/bootstrap/scss/bootstrap.scss';
+@import 'var';
+@import 'mixins';
+@import 'btn';
+@import 'devider';
+@import 'header';
+@import 'font';
+@import 'typography';
+@import 'advantages';
+@import 'services';
+@import 'solution';
+@import 'social';
+@import 'hero';
+@import 'leaf';
+@import 'about';
+@import 'gallery';
+@import 'footer';

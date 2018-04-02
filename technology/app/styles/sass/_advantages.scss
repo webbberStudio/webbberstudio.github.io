@@ -1,0 +1,33 @@
+.advantages {
+  padding: 100px 0 0;
+
+  &:after {
+    @extend %devider;
+    margin-top: 95px;
+  }
+
+  &__item {
+    width: 20%;
+    padding: 0 22px;
+  }
+
+  &__title {
+    color: $text-black;
+    @extend %font-main-bold;
+    text-transform: uppercase;
+    margin: 28px 0 20px;
+
+    &:after {
+      content: '';
+      display: block;
+      margin: 23px auto 0;
+      width: 30px;
+      height: 3px;
+      background-color: $bg-main;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 0;
+  }
+}
