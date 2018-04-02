@@ -30,3 +30,9 @@ const heroSlider = $('.hero__slider ul').lightSlider({
     document.querySelector('.hero').classList.add('hero--slider-load');
   }
 });
+
+// main page gallery initializatio
+const lightGalleryMain = $('#gallery-main').lightGallery({
+  selector: '.gallery__item a',
+  downloadUrl: false
+});
