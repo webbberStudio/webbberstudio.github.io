@@ -1,0 +1,32 @@
+header.header
+  .container.d-flex.align-items-start.justify-content-between
+    a.header__logo(href='#')
+
+    nav.header__nav
+      button.header__nav-open
+
+      ul.nav
+        li.nav-item.header__nav-title 
+          button.header__nav-prev Меню
+          button.header__nav-close
+
+        each nav in navs
+          li.nav-item
+            a.nav-link(href=nav.url)= nav.title
+            
+            if nav.childs
+              ul.header__nav-child
+                each child in nav.childs
+                  li
+                    a(href=child.url)= child.title
+
+    .header__menu.d-flex.align-items-center
+      .social.d-flex
+        a.social__link.social__in(href='#!')
+        a.social__link.social__fb(href='#!')
+        a.social__link.social__yt(href='#!')
+
+      .header__btn-phone
+        .header__block-phone
+          a.header__block-phone__number(href='tel:88005555555') 8-800-555-55-55
+          a.btn.btn--small.btn--no-shadow.header__block-phone__btn(href='#!') Перезвоните мне

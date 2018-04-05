@@ -1,0 +1,9 @@
+section.services-page
+  .container
+    
+    h2 Пластическая хирургия
+
+    .row
+      each val in team 
+        .col-xl-3.col-lg-6.col-6.team__item
+          +list-item(val)(class='list-item--big')
