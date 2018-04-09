@@ -1,0 +1,9 @@
+include blocks/head.pug
+include sections/share-opinion.pug
+
+.form-shower
+  +share-opinion(forms[0])
+  +share-opinion(forms[0])(class='form-success--show')
+  +share-opinion(forms[1])
+  +share-opinion(forms[1])(class='form-success--show')
+

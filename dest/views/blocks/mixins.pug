@@ -1,0 +1,66 @@
+mixin list-item(data)
+  .list-item(class!=attributes.class)
+    .list-item__inner
+      .list-item__img-wrap
+        a.list-item__img(href='#!' style="background-image: url('img/" +data.href+ "')")
+          .list-item__img-hover
+          
+      .list-item__text
+        if data.time
+          .list-item__date
+            span.date !{data.time}
+
+        .list-item__title
+          a(href='#!').link.link--blacked !{data.title}
+            
+        if data.desc 
+          p.list-item__desc !{data.desc}
+
+        if data.tags
+          .list-item__tags
+            each val in data.tags
+              span.list-item__tag= val
+
+mixin menu(data)
+  .container
+    nav.menu-block
+      ul.d-flex.flex-row.flex-wrap.justify-content-start.justify-content-lg-center.align-items-center
+        each val in data
+          li.menu-block__item-wrap
+            if val.active
+              a(href='#!').menu-block__item.active= val.title
+            else
+              a(href='#!').menu-block__item= val
+
+mixin gallery(data)
+  .gallery__item.col-6.col-md-4.col-lg-3(class!=attributes.class)
+    a.gallery__item-wrap(href= data.img data-src= data.img)
+        img.gallery__img(src= data.thumb)
+        .gallery__hover 
+
+    if data.desc
+      .gallery__link-wrap
+        a(href="#!").gallery__desc.link--blacked= data.desc
+
+mixin callToActionSimple(data)
+  .call-to-action-simple
+    .container
+      .call-to-action-simple__wrap.d-flex.justify-content-between.flex-column.align-items-center
+        if data.title
+          h2.call-to-action-simple__title= data.title
+        p.call-to-action-simple__desc= data.desc
+
+        .call-to-action-simple__button
+          .btn.btn--outline.btn--black= data.btnTitle
+
+mixin newsList(data)
+  .news-list__item
+    .news-list__wrap
+      a.news-list__img(href='#!' style="background-image: url('img/" +data.href+ "')")
+          
+    .news-list__time
+      span.date= data.time
+    .news-list__title
+      a.link--title(href='#!')= data.title
+    .news-list__desc
+      p= data.desc

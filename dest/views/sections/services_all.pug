@@ -1,0 +1,8 @@
+section.services-page
+  .container
+    h2 Пластическая хирургия
+
+    .row
+      each val in solutions 
+        .services-page__item.col-6.col-md-4.col-lg-3
+          +list-item(val)(class='list-item--big')
