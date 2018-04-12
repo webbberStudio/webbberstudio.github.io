@@ -1,0 +1,35 @@
+footer.footer
+  .container
+      each n in nav
+        .footer__col
+          h4.footer__title= n.title
+
+          each child in n.childs
+            a.footer__link(href='#!')= child.title
+
+      .footer__mobile
+        a(href='#!') About
+        a(href='#!') News
+        a(href='#!') Job
+        a(href='#!') Privacy
+        a(href='#!') Legal
+
+  .footer__copy
+    .container
+      span SafeDNS, Inc. © 2012-2018
+
+      nav
+        a(href='#!') Privacy
+        a(href='#!') Term of police
+        a(href='#!') Legal
+
+      .footer__ips
+        span 195.46.39.39
+        span 195.46.39.40
+
+      .footer__social
+        a.footer__social_youtube(href='#!')
+        a.footer__social_google(href='#!')
+        a.footer__social_linkedin(href='#!')
+        a.footer__social_twitter(href='#!')
+        a.footer__social_facebook(href='#!')
