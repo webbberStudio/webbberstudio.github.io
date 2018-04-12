@@ -688,7 +688,7 @@ ul.list_round li:before {
     position: relative;
 }
 
-.footer__copy .container {display: flex;justify-content: center;align-items: center;justify-content: space-between;align-items: center;
+.footer__copy .container {display: flex;justify-content: center;align-items: center;
 }
 
 .footer__copy nav {
@@ -722,6 +722,7 @@ ul.list_round li:before {
 
 .footer__social a {
       width: 48px;
+      height: 48px;
       display: block;
       border-radius: 50%;
       opacity: 1;
@@ -1066,12 +1067,16 @@ ul.list_round li:before {
     margin-top: 39px;
   }
 
+  .footer__copy .container {display: flex;justify-content: space-between;align-items: center;
+  }
+
   .footer__social {
     position: static;
   }
 
   .footer__social a {
-    height: ;
+    width: 31px;
+    height: 31px;
   }
 
   .footer__social a {
